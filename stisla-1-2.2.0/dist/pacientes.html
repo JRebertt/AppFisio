@@ -36,7 +36,7 @@
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
           <div class="search-element">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" data-width="250">
             <button class="btn" type="submit"><i class="fas fa-search"></i></button>
             <div class="search-backdrop"></div>
             <div class="search-result">
@@ -260,7 +260,7 @@
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="index.html">Início</a></li>
-                <li class=active><a class="nav-link" href="pacientes.html">Lista</a></li>
+                <li class=active><a class="nav-link" href="pacientes.html">Pacientes</a></li>
               </ul>
             </li>
             <li class="menu-header">Starter</li>
@@ -419,7 +419,7 @@
                   </div>
                   <div class="card-body p-0">
                     <div class="table-responsive">
-                      <table class="table table-striped">
+                      <table class="table table-striped" id="lisTable">
                         <tr>
                           <!-- <th>
                             <div class="custom-checkbox custom-control">
@@ -429,12 +429,14 @@
                           </th> 
                         -->
                           <th>Id</th>
-                          <th>Name</th>
+                          <th>Nome</th>
                           <th>Cpf</th>
                           <th>Progresso</th>
                           <th>Data</th>
                           <th>Status</th>
                           <th>Interação</th>
+                          <th></th>
+                          <th></th>
                         </tr>
                         <tr>
                           <!-- <td class="p-0 text-center">
@@ -454,6 +456,8 @@
                           <td>2021-01-20</td>
                           <td><div class="badge badge-danger">Off</div></td>
                           <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
+                          <td><a href="#" class="btn btn-success">Editar</a></td>
+                          <td><a href="#" class="btn btn-danger deletar">Apagar</a></td>
                         </tr>
                         <tr>
                           <!-- <td class="p-0 text-center">
@@ -473,45 +477,10 @@
                           <td>2021-04-10</td>
                           <td><div class="badge badge-success">On</div></td>
                           <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
+                          <td><a href="#" class="btn btn-success">Editar</a></td>
+                          <td><a href="#" class="btn btn-danger deletar">Apagar</a></td>
                         </tr>
-                        <tr>
-                          <!-- <td class="p-0 text-center">
-                            <div class="custom-checkbox custom-control">
-                              <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-3">
-                              <label for="checkbox-3" class="custom-control-label">&nbsp;</label>
-                            </div>
-                          </td> -->
-                          <td>3</td>
-                          <td>Priscila</td>
-                          <td>931.486.910-59</td>
-                          <td class="align-middle">
-                            <div class="progress" data-height="4" data-toggle="tooltip" title="70%">
-                              <div class="progress-bar bg-warning" data-width="70"></div>
-                            </div>
-                          </td>
-                          <td>2021-07-29</td>
-                          <td><div class="badge badge-danger">Desativado</div></td>
-                          <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
-                        </tr>
-                        <tr>
-                          <!-- <td class="p-0 text-center">
-                            <div class="custom-checkbox custom-control">
-                              <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-4">
-                              <label for="checkbox-4" class="custom-control-label">&nbsp;</label>
-                            </div>
-                          </td> -->
-                          <td>4</td>
-                          <td>Sarah</td>
-                          <td>432.618.310-14</td>
-                          <td class="align-middle">
-                            <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
-                              <div class="progress-bar bg-success" data-width="100"></div>
-                            </div>
-                          </td>
-                          <td>2021-09-16</td>
-                          <td><div class="badge badge-success">Ativo</div></td>
-                          <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
-                        </tr>
+                        
                       </table>
                     </div>
                   </div>
@@ -528,7 +497,7 @@
                     <!-- <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande</button> -->
 
                     <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-xl" style="max-width: 40%;">
+                      <div class="modal-dialog modal-xl" style="max-width: 50%;">
                           <div class="modal-content">
                               <div class="modal-header">
                                   <h5 class="modal-title" id="exampleModalLabel">Novo Cadastro</h5>
@@ -714,6 +683,8 @@
   <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
   <script src="assets/modules/moment.min.js"></script>
+  <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script> 
+  <script src="assets/js/forms.js"></script>
   <script src="assets/js/stisla.js"></script>
   
   <!-- JS Libraies -->
