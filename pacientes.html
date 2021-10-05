@@ -457,7 +457,7 @@
                           <td><div class="badge badge-danger">Off</div></td>
                           <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
                           <td><a href="#" class="btn btn-success">Editar</a></td>
-                          <td><button class="btn btn-danger del">Apagar</button></td>
+                          <td><button class="btn btn-danger btn-del">Apagar</button></td>
                         </tr>
                         <tr>
                           <!-- <td class="p-0 text-center">
@@ -478,7 +478,7 @@
                           <td><div class="badge badge-success">On</div></td>
                           <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
                           <td><a href="#" class="btn btn-success">Editar</a></td>
-                          <td><button class="btn btn-danger del">Apagar</button></td>
+                          <td><button class="btn btn-danger btn-del">Apagar</button></td>
                         </tr>
                         
                       </table>
@@ -497,7 +497,7 @@
                     <!-- <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande</button> -->
 
                     <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-xl" style="max-width: 50%;">
+                      <div class="modal-dialog modal-xl" style="max-width: 80%;">
                           <div class="modal-content">
                               <div class="modal-header">
                                   <h5 class="modal-title" id="exampleModalLabel">Novo Cadastro</h5>
@@ -684,16 +684,24 @@
   <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
   <script src="assets/modules/moment.min.js"></script>
   <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script> 
-  <script src="assets/js/forms.js"></script>
   <script src="assets/js/stisla.js"></script>
   
   <!-- JS Libraies -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 
   <!-- Page Specific JS File -->
   
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/data/firebase.js"></script>  
+
 
   <script>
        //mask form
