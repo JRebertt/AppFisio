@@ -1,4 +1,4 @@
-# Free Bootstrap Admin Template 
+# Dashboard Admin 
 Stisla is Free Bootstrap Admin Template and will help you to speed up your project, design your own dashboard UI and the users will love it.
 
 More info: https://getstisla.com
@@ -7,6 +7,8 @@ More info: https://getstisla.com
 
 # Roadmap
 You can find the Stisla road map here: https://trello.com/b/M8TMnehE/stisla-roadmap
+
+    C:\Users\joaor\OneDrive\Documentos\Projeto Fisio\NovoDash\dist
 
 # Contributing
 The contribution guide is still in progress :)
