@@ -8,7 +8,7 @@ More info: https://getstisla.com
 # Roadmap
 You can find the Stisla road map here: https://trello.com/b/M8TMnehE/stisla-roadmap
 
-    C:\Users\joaor\OneDrive\Documentos\Projeto Fisio\NovoDash\dist
+C:\Users\joaor\OneDrive\Documentos\Projeto Fisio\NovoDash\dist
 
 # Contributing
 The contribution guide is still in progress :)
