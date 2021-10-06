@@ -10,12 +10,8 @@
         appId: "1:347902797715:web:6d31c0c8cae973f9582a66"
     };
 
-
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
-
-
 
 
     // Declarando Variaveis 
@@ -26,16 +22,14 @@
   
 
 
-    // Função para criar enviar os dados ao banco
+    // Criar e Enviar dados para firestore
     btnForm.addEventListener('click',(e) => {
       e.preventDefault();
-      
 
-
-    //   Variaveis com o valor do inpunt 
-
+      // Variavel Collection name
       let paciente = "pacientes";
-
+      
+      // Variaveis com o valor do inpunt 
       let nome = document.querySelector('#inputName').value;
       let cpf = document.querySelector('#inputCPF').value;
       let data = document.querySelector('#inputData').value;
@@ -56,7 +50,7 @@
 
 
 
-    //   Enviando dados para o banco
+      // Enviando dados para o banco
       db.collection(paciente).add({
           Nome:nome,
           CPF:cpf,
@@ -85,51 +79,80 @@
       });
 
       form.reset();
-  });
+    });
 
 
 
 
-// Lendo todos os dados de uma coleção em tempo real!!
-db.collection("pacientes").onSnapshot((data)=>{
-  const table = document.getElementById("lisTable");  
-  data.docs.map((val)=>{
+      // Lendo todos os dados de uma coleção em tempo real!!
+      db.collection("pacientes").onSnapshot((data)=>{
+        const table = document.getElementById("lisTable");  
+        data.docs.map((val)=>{
 
 
-    // O codigo apenas funciona após remover o esses inner
+      // O codigo apenas funciona após remover o esses inner
 
-  //   table.innerHTML += 
+      // Add conteudo de dados no table
+        table.innerHTML += 
 
-  //   `<tr>
-  //   <td>4</td>
-  //   <td>${val.data().Nome   }</td>
-  //   <td>${val.data().CPF}</td>
-  //   <td class="align-middle">
-  //     <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
-  //       <div class="progress-bar bg-success" data-width="100"></div>
-  //     </div>
-  //   </td>
-  //   <td>${val.data().Nascimento}</td>
-  //   <td><div class="badge badge-success">Ativo</div></td>
-  //   <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
-  //   <td><a href="#" class="btn btn-success">Editar</a></td>
-  //   <td><button class="btn btn-danger" id="btn-del">Apagar</button></td>
-  //   </tr>
-  // `
+        `<tr>
+        <td user-id="${val.id}">3</td>
+        <td>${val.data().Nome   }</td>
+        <td>${val.data().CPF}</td>
+        <td class="align-middle">
+          <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
+            <div class="progress-bar bg-success" data-width="100"></div>
+          </div>
+        </td>
+        <td>${val.data().Nasciment}</td>
+        <td><div class="badge badge-success">Ativo</div></td>
+        <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
+        <td><a href="#" class="btn btn-success">Editar</a></td>
+        <td><button class="btn btn-danger btn-del">Apagar</button></td>
+        </tr>
+      `
 
+        });
+
+        var apagar = document.querySelectorAll('.btn-del');
+        
+        db.collection('pacientes').get()
+        .then((snapshot)=>{
+
+        snapshot.forEach((doc)=>{
+
+          let id = doc.id;
+          
+          apagar.forEach(element =>{
+          
+            element.addEventListener('click',function(e){
+              e.preventDefault();
+          
+              let id = doc.uid;
+          
+              console.log("Apagado");
   
+              db.collection('pacientes').doc(id).delete();
+            });
+          });        
+        });
+      });
+        
+        
 
     });
 
-});
+
+    
+
+    //   // Deletando conteudos
+    // $(".btn-del").click(function(){
+    //   console.log("Clicado!");
+    // });
 
 
-
-
-// Deletando conteudos
-deletar.addEventListener("click",deletando);
-function deletando(){
-  alert("deu certo"); 
-}
-
- 
+    // JsVanilla
+     // deletar.addEventListener("click",deletando);
+      // function deletando(){
+      //   alert("deu certo"); 
+      // }
