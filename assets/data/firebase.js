@@ -99,12 +99,7 @@
         <td user-id="${val.id}">3</td>
         <td>${val.data().Nome   }</td>
         <td>${val.data().CPF}</td>
-        <td class="align-middle">
-          <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
-            <div class="progress-bar bg-success" data-width="100"></div>
-          </div>
-        </td>
-        <td>${val.data().Nasciment}</td>
+        <td>${val.data().Nascimento}</td>
         <td><div class="badge badge-success">Ativo</div></td>
         <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
         <td><a href="#" class="btn btn-success">Editar</a></td>
@@ -128,7 +123,6 @@
             element.addEventListener('click',function(e){
               e.preventDefault();
           
-              let id = doc.uid;
           
               console.log("Apagado");
   

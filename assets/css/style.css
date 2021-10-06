@@ -2825,3 +2825,12 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   border-radius: 50%;
   font-size: 30px;
 }
+
+
+@media (max-width:575px) {
+
+  #modal-size{
+    margin-left: 35px;
+  }
+  
+}
