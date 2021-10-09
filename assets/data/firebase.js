@@ -11,7 +11,7 @@
     };
 
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+    var service = firebase.initializeApp(firebaseConfig);
 
 
     // Declarando Variaveis 
@@ -75,7 +75,7 @@
 
       })
       .catch((err) => {
-              console.log("Ops,Não foi possível finalizar o cadastro,Chama o Rebertt",err);
+              console.log("Ops,Não foi possível finalizar o cadastro",err);
       });
 
       form.reset();
@@ -88,9 +88,6 @@
       db.collection("pacientes").onSnapshot((data)=>{
         const table = document.getElementById("lisTable");  
         data.docs.map((val)=>{
-
-
-      // O codigo apenas funciona após remover o esses inner
 
       // Add conteudo de dados no table
         table.innerHTML += 
@@ -111,30 +108,23 @@
 
         var apagar = document.querySelectorAll('.btn-del');
         
-        db.collection('pacientes').get()
-        .then((snapshot)=>{
-
-        snapshot.forEach((doc)=>{
-
-          let id = doc.id;
+       
           
           apagar.forEach(element =>{
-          
-            element.addEventListener('click',function(e){
-              e.preventDefault();
-          
-          
-              console.log("Apagado");
-  
-              db.collection('pacientes').doc(id).delete();
-            });
-          });        
-        });
-      });
-        
-        
+        element.addEventListener('click',function(e){
+                      e.preventDefault();
+                      console.log("Apagado");
 
-    });
+           service.firestore().collection('pacientes').doc(id).delete();
+
+
+           });
+                          
+
+          });
+
+            
+        });
 
 
     
