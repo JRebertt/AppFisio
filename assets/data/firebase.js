@@ -83,60 +83,45 @@
 
 
 
+// Lendo todos os dados de uma coleção em tempo real!!
+db.collection("pacientes").onSnapshot((data) => {  
+  const table = document.getElementById("lisTable");  
+  // aqui eu esvazio antes de popular os novos dados.  
+  // adiciono apenas cabeçalho substituindo todo o
+table.innerHTML = `<tr><th>Id</th><th>Nome</th>                          
+                  <th>Cpf</th>                          
+                  <th>Progresso</th>                          
+                  <th>Data</th>                          
+                  <th>Status</th>                          
+                  <th>Interação</th>                        
+                  </tr>`;
+data.docs.forEach((val, index) => {    
+      // Add conteudo de dados no table    
+      // Pego o id    
+      let id = val.id;    
+      //  no lugar de pegar auqele array e adicionar um addEventListenner, eu altero o typo do button    
+      // para type="button" porque por padrão ele vem com type="submit"    
+      // adiciono um onclick passando o id atual pegado anteriormente no for    
+      table.innerHTML += `<tr>        
+              <td user-id="${val.id}">${index + 1}</td>        
+              <td>${val.data().Nome}</td>        
+              <td>${val.data().CPF}</td>        
+              <td>${val.data().Nascimento}</td>        
+              <td><div class="badge badge-success">Ativo</div></td>        
+              <td><a href="#" class="btn btn-secondary">Detalhes</a></td>        
+              <td><a href="avaliar.html" class="btn btn-warning">Avaliar</a></td>
+              <td><a href="evoluir.html" class="btn btn-primary">Evoluir</a></td>
+              <td><a href="historico.html" class="btn btn-info">Historico</a></td>       
+              <td>
+              <button class="btn btn-danger btn-del" type="button" onclick=apagar_do_banco("${id}")>Apagar</button>
+              </td>        
+          </tr>`;  
+      });
+});
 
-      // Lendo todos os dados de uma coleção em tempo real!!
-      db.collection("pacientes").onSnapshot((data)=>{
-        const table = document.getElementById("lisTable");  
-        data.docs.map((val)=>{
-
-      // Add conteudo de dados no table
-        table.innerHTML += 
-
-        `<tr>
-        <td user-id="${val.id}">3</td>
-        <td>${val.data().Nome   }</td>
-        <td>${val.data().CPF}</td>
-        <td>${val.data().Nascimento}</td>
-        <td><div class="badge badge-success">Ativo</div></td>
-        <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
-        <td><a href="#" class="btn btn-success">Editar</a></td>
-        <td><button class="btn btn-danger btn-del">Apagar</button></td>
-        </tr>
-      `
-
-        });
-
-        var apagar = document.querySelectorAll('.btn-del');
-        
-       
-          
-          apagar.forEach(element =>{
-        element.addEventListener('click',function(e){
-                      e.preventDefault();
-                      console.log("Apagado");
-
-           service.firestore().collection('pacientes').doc(id).delete();
-
-
-           });
-                          
-
-          });
-
-            
-        });
-
-
-    
-
-    //   // Deletando conteudos
-    // $(".btn-del").click(function(){
-    //   console.log("Clicado!");
-    // });
-
-
-    // JsVanilla
-     // deletar.addEventListener("click",deletando);
-      // function deletando(){
-      //   alert("deu certo"); 
-      // }
+function apagar_do_banco(id) {  
+  // pego o id passado no onclick e apago o item necessário  
+  service.firestore().collection("pacientes").doc(id).delete().then(() => {     
+      console.log("Apagado");    
+  });
+  };
