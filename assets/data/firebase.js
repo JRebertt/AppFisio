@@ -102,7 +102,7 @@ db.collection("pacientes").onSnapshot((data) => {
               <td>
               <div class="btn-group dropup">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais</button>
-            <div class="dropdown-menu"><a class="dropdown-item has-icon" href="#"><i class="far fa-heart"></i> Detalhes</a>
+            <div class="dropdown-menu"><a class="dropdown-item has-icon" href="#"><i class="far fa-eye"></i> Detalhes</a>
             <a class="dropdown-item has-icon" href="historico.html"><i class="far fa-file"></i> Histórico</a>
             </div>
               </div>
