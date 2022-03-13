@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
@@ -14,26 +15,32 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
-<!-- Start GA -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Start GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-94034622-3');
-</script>
-<!-- /END GA --></head>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-94034622-3');
+  </script>
+  <!-- /END GA -->
+</head>
 
 <body>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
       <div class="navbar-bg"></div>
-      <nav class="navbar navbar-expand-lg main-navbar"><!--Navbar Start-->
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <!--Navbar Start-->
         <form class="form-inline mr-auto">
           <ul class="navbar-nav mr-3">
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
+                  class="fas fa-search"></i></a></li>
           </ul>
           <div class="search-element">
             <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" data-width="250">
@@ -99,7 +106,8 @@
           </div>
         </form>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
               <div class="dropdown-header">Messages
                 <div class="float-right">
@@ -165,7 +173,8 @@
               </div>
             </div>
           </li>
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
               <div class="dropdown-header">Notificações
                 <div class="float-right">
@@ -224,9 +233,11 @@
               </div>
             </div>
           </li>
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Olá, Usuario</div></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+              <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+              <div class="d-sm-none d-lg-inline-block">Olá, Usuario</div>
+            </a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logado à 5 min atrás</div>
               <a href="features-profile.html" class="dropdown-item has-icon">
@@ -245,8 +256,10 @@
             </div>
           </li>
         </ul>
-      </nav><!--Navbar End-->
-      <div class="main-sidebar sidebar-style-2"><!--Sidbar Start-->
+      </nav>
+      <!--Navbar End-->
+      <div class="main-sidebar sidebar-style-2">
+        <!--Sidbar Start-->
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
             <a href="index.html">Fisio</a>
@@ -261,37 +274,68 @@
               <ul class="dropdown-menu">
                 <li class=active><a class="nav-link" href="index.html">Início</a></li>
                 <li><a class="nav-link" href="pacientes.html">Paciente</a></li>
-                <li><a class="nav-link" href="pacientes.html">Novo Prontuario</a></li>
-                <li><a class="nav-link" href="pacientes.html">Nova Evolução</a></li>
-                <li><a class="nav-link" href="pacientes.html">Escalas</a></li>
+                <li><a class="nav-link" href="pacientes.html">Prontuario</a></li>
+                <li><a class="nav-link" href="evoluir.html">Evolução</a></li>
+                <li><a class="nav-link" href="escalas.html">Escalas</a></li>
               </ul>
             </li>
           </ul>
-
-          <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-            <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-              <i class="fas fa-rocket"></i> 
-              Documentation
-            </a>
-          </div>        
         </aside>
-      </div><!--Sidebar End-->
+      </div>
+      <!--Sidebar End-->
 
 
       <!--Css Area Start-->
       <style>
-        .section-form{
+        .section-form {
           background-color: #fff;
           border-radius: 0.5rem;
         }
-        #forms{
+
+        #forms {
           padding: 2rem;
         }
 
-        .section-footer{
-         
-         padding: 1rem; 
+        .section-footer {
+
+          padding: 1rem;
         }
+
+        textarea {
+          width: 40rem;
+          height: 10rem;
+        }
+
+        #home1 input,
+        #tab2 input {
+          width: 45rem;
+          height: 10;
+        }
+
+        #tab3 input {
+          width: 40rem;
+          height: 10rem;
+        }
+
+        #tab4 input,
+        #tab5 input {
+          width: 50rem;
+          height: 25rem;
+        }
+
+        #text-input input {
+          width: 20rem;
+        }
+
+        #fileDrop{
+          margin-left: 10rem;
+        }
+
+        #fileDrop input {
+         width: 15rem;         
+        }
+
+
       </style>
       <!--Css Area End-->
 
@@ -303,169 +347,229 @@
           </div>
 
           <div class="section-form">
-            <form autocomplete="off" action="" data-ls-module="form" id="forms">
-              <div class="form-group">
-                <label for="inputName">Nome</label>
-                <input type="text" class="form-control" id="inputName" placeholder="Nome" required>
+
+            <div class="">
+              <div class="row">
+                <div class="col-6 col-sm-4 col-md-2">
+                  <ul class="nav nav-pills flex-column" id="myTab4" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab1" data-toggle="tab" href="#home1" role="tab"
+                        aria-controls="home" aria-selected="true">Anamnese</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="div-tab2" data-toggle="tab" href="#tab2" role="tab"
+                        aria-controls="profile" aria-selected="false">Exame Físico</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="div-tab3" data-toggle="tab" href="#tab3" role="tab"
+                        aria-controls="profile" aria-selected="false">Teste Ortopédicos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="div-tab4" data-toggle="tab" href="#tab4" role="tab"
+                        aria-controls="profile" aria-selected="false">Hipótese Diagnóstica</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="div-tab5" data-toggle="tab" href="#tab5" role="tab"
+                        aria-controls="profile" aria-selected="false">Tomada de Decisão</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-8">
+                  <div class="tab-content no-padding" id="myTab2Content">
+                    <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab1">
+                      <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label for="inputName">Queixa Principal</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">História da Doença Atual (HDA)</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">História da Doença Pregressa (HDP)</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Histórico Familiar</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Doenças Cronicas</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Medicamentos</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Procedimentos Cirúgicos</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                         <div class="form-row">
+                          <div class="form-group col-md-4" >
+                            <label for="inputName">Exames Complementares</label>
+                            <input type="text" class="form-control" id="inputName" required style="width: 20rem;">
+                          </div>
+                          <div class="form-group col-md-4" id="fileDrop">
+                            <label>File</label>
+                            <input type="file" class="form-control">
+                          </div>  
+                         </div>
+
+                          <label for="inputName">Atividades de Vida Diária e Lazer</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Tabagismos</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Consumo de Alcool/Outras Drogas</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Praticas de Atividades Físicas </label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Alimentação</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Localização da Dor</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <div class="form-group">
+                            <label>Intencidade da Dor</label>
+                            <input type="range" class="form-control">
+                          </div>
+
+                          <label for="inputName">Queixa Principal</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                          <label for="inputName">Queixa Principal</label>
+                          <input type="text" class="form-control" id="inputName" required>
+
+                        </div>
+                        
+
+                    </div>
+
+
+                    <div class="form-row">
+                      <div class="form-group col-md-3">
+                        <label for="inputSexo">Sexo</label>
+                        <select class="form-control" id="inputSexo" required>
+                          <option selected>Escolha...</option>
+                          <option value="M">Masculino</option>
+                          <option value="F">Feminino</option>
+                        </select>
+                      </div>
+                      <div class="form-group-md-4">
+                        <label for="inputCivil">Estado Civil</label>
+                        <select id="inputCivil" class="form-control" required>
+                          <option selected>Escolha...</option>
+                          <option value="Solteiro">Solteiro</option>
+                          <option value="Casado">Casado</option>
+                          <option value="Divorciado">Divorciado</option>
+                          <option value="Viuvo">Viúvo</option>
+                        </select>
+                      </div>
+                    </div>
+                    </form>
+                  </div>
+
+                  <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="div-tab2">
+                    <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                      <div class="form-group">
+                        <label for="inputName">Queixa Principal</label>
+                        <input type="text" class="form-control" id="inputName" required>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-md-4">
+                          <label for="inputCPF">CPF</label>
+                          <input type="text" class="form-control ls-mask-cpf" id="inputCPF"
+                            placeholder="xxx.xxx.xxx.-xx" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputData">Data de Nascimento</label>
+                          <input type="text" class="form-control ls-mask-date" id="inputData" placeholder="xx/xx/xxxx"
+                            required>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="inputIdade">Idade</label>
+                          <input type="text" class="form-control" id="inputIdade" placeholder="xx" required>
+                        </div>
+
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-md-4">
+                          <label for="inputNatural">Naturalidade</label>
+                          <input type="text" class="form-control" id="inputNatural" placeholder="Naturalidade" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                          <label for="inputSexo">Sexo</label>
+                          <select class="form-control" id="inputSexo" required>
+                            <option selected>Escolha...</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputCivil">Estado Civil</label>
+                          <select id="inputCivil" class="form-control" required>
+                            <option selected>Escolha...</option>
+                            <option value="Solteiro">Solteiro</option>
+                            <option value="Casado">Casado</option>
+                            <option value="Divorciado">Divorciado</option>
+                            <option value="Viuvo">Viúvo</option>
+                          </select>
+                        </div>
+
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="div-tab3">
+                    <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                      <div class="form-group">
+                        <label for="inputName">Testes para Coluna Vertebral</label>
+                        <input type="text" class="form-control" id="inputName" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputName">Testes para Membros Superiores</label>
+                        <input type="text" class="form-control" id="inputName" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputName">Testes para Membros Inferiores</label>
+                        <input type="text" class="form-control" id="inputName" required>
+                      </div>
+                  </div>
+                  </form>
+
+                  <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="div-tab4">
+                    <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="inputName" required>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="div-tab5">
+                    <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="inputName" required>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-4">
-                  <label for="inputCPF">CPF</label>
-                  <input type="text" class="form-control ls-mask-cpf" id="inputCPF" placeholder="xxx.xxx.xxx.-xx"
-                    required>
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="inputData">Data de Nascimento</label>
-                  <input type="text" class="form-control ls-mask-date" id="inputData" placeholder="xx/xx/xxxx"
-                    required>
-                </div>
-                <div class="form-group col-md-2">
-                  <label for="inputIdade">Idade</label>
-                  <input type="text" class="form-control" id="inputIdade" placeholder="xx" required>
-                </div>
-
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-4">
-                  <label for="inputNatural">Naturalidade</label>
-                  <input type="text" class="form-control" id="inputNatural" placeholder="Naturalidade" required>
-                </div>
-
-                <div class="form-group col-md-3">
-                  <label for="inputSexo">Sexo</label>
-                  <select class="form-control" id="inputSexo" required>
-                    <option selected>Escolha...</option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Feminino</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="inputCivil">Estado Civil</label>
-                  <select id="inputCivil" class="form-control" required>
-                    <option selected>Escolha...</option>
-                    <option value="Solteiro">Solteiro</option>
-                    <option value="Casado">Casado</option>
-                    <option value="Divorciado">Divorciado</option>
-                    <option value="Viuvo">Viúvo</option>
-                  </select>
-                </div>
-
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputTel">Telefone Residencial</label>
-                  <input type="text" class="form-control" id="inputTel" placeholder="" autocomplete="off">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputCel">Celular</label>
-                  <input type="text" class="form-control" id="inputCel" placeholder="(xx) xxxxx-xxxx"
-                    autocomplete="off" required>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputProf">Ocupação</label>
-                  <input type="text" class="form-control" id="inputProf">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputEscol">Escolaridade</label>
-                  <select id="inputEscol" class="form-control" required>
-                    <option selected>Escolha...</option>
-                    <option value="SemEscolaridade">Sem escolaridade</option>
-                    <option value="Alfabetização">Alfabetização</option>
-                    <option value="FundamentalIncompleto">Fundamental incompleto</option>
-                    <option value="FundamentalCompleto">Fundamental completo</option>
-                    <option value="EnsinoMedioIncompleto">Ensino médio incompleto</option>
-                    <option value="EnsinoMedioCompleto">Ensino médico completo</option>
-                    <option value="SuperiorIncompleto">Superior incompleto</option>
-                    <option value="SuperiorCompleto">Superior completo</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group col-md-14">
-                <label for="inputRelig">Religião</label>
-                <input type="text" class="form-control" id="inputRelig">
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-4">
-                  <label for="inputCidade">Cidade</label>
-                  <input type="text" class="form-control" id="inputCidade" required>
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="inputEstado">Estado</label>
-                  <select id="inputEstado" class="form-control" required>
-                    <option selected>Escolha...</option>
-                    <option value="Acre">AC</option>
-                    <option value="Alagoas">AL</option>
-                    <option value="Amapá">AP</option>
-                    <option value="Amazonas">AM</option>
-                    <option value="Bahia">BA</option>
-                    <option value="Ceará">CE</option>
-                    <option value="Espírito Santo">ES</option>
-                    <option value="Goías">GO</option>
-                    <option value="Maranhão">MA</option>
-                    <option value="Mato Grosso">MT</option>
-                    <option value="Mato Grosso do Sul">MS</option>
-                    <option value="Minas Gerais">MG</option>
-                    <option value="Pará">PA</option>
-                    <option value="Paraná">PR</option>
-                    <option value="Pernambuco">PE</option>
-                    <option value="Piauí">PI</option>
-                    <option value="Rio de Janeiro">RJ</option>
-                    <option value="Rio Grande do Norte">RN</option>
-                    <option value="Rio Grande do Sul">RS</option>
-                    <option value="Rondônia">RO</option>
-                    <option value="Roraima">RR</option>
-                    <option value="Santa Catarina">SC</option>
-                    <option value="São Paulo">SP</option>
-                    <option value="Sergipe">SE</option>
-                    <option value="Tocantins">TO</option>
-                    <option value="Distrito Federal">DF</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="inputZip">Cep</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputAddress">Endereço</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Travessa Primeiro de Março">
-                </div>
-
-                <div class="form-group col-md-6">
-                  <label for="inputBairro">Bairro</label>
-                  <input type="text" class="form-control" id="inputBairro" placeholder="Campina">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" required> Confirme
-                  </label>
-                </div>
-              </div>
-            </form>
-
-            <div class="section-footer">
-              <button type="submit" class="btn btn-primary" style="color: #fff;" id="btn-form">Salvar</button>
-
             </div>
           </div>
-
-          </div>
-        </section>
       </div>
-      
+      <div class="section-footer">
+        <button type="submit" class="btn btn-primary" style="color: #fff;" id="btn-form">Salvar</button>
+      </div>
     </div>
+
+  </div>
+  </section>
+  </div>
+
+  </div>
   </div>
 
   <!-- General JS Scripts -->
@@ -476,13 +580,14 @@
   <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
   <script src="assets/modules/moment.min.js"></script>
   <script src="assets/js/stisla.js"></script>
-  
+
   <!-- JS Libraies -->
 
   <!-- Page Specific JS File -->
-  
+
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/custom.js"></script>
 </body>
+
 </html>
