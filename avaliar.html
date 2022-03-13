@@ -259,18 +259,41 @@
             <li class="dropdown active">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="index.html">Início</a></li>
+                <li class=active><a class="nav-link" href="index.html">Início</a></li>
                 <li><a class="nav-link" href="pacientes.html">Paciente</a></li>
+                <li><a class="nav-link" href="pacientes.html">Novo Prontuario</a></li>
+                <li><a class="nav-link" href="pacientes.html">Nova Evolução</a></li>
+                <li><a class="nav-link" href="pacientes.html">Escalas</a></li>
               </ul>
             </li>
           </ul>
 
           <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
             <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-              <i class="fas fa-rocket"></i> Documentation
+              <i class="fas fa-rocket"></i> 
+              Documentation
             </a>
-          </div>        </aside>
+          </div>        
+        </aside>
       </div><!--Sidebar End-->
+
+
+      <!--Css Area Start-->
+      <style>
+        .section-form{
+          background-color: #fff;
+          border-radius: 0.5rem;
+        }
+        #forms{
+          padding: 2rem;
+        }
+
+        .section-footer{
+         
+         padding: 1rem; 
+        }
+      </style>
+      <!--Css Area End-->
 
       <!-- Main Content -->
       <div class="main-content">
@@ -279,166 +302,169 @@
             <h1>Avaliação</h1>
           </div>
 
-          <div class="section-body">
+          <div class="section-form">
             <form autocomplete="off" action="" data-ls-module="form" id="forms">
-                <div class="form-group">
-                        <label for="inputName">Nome</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Nome" required>
-                    </div>
+              <div class="form-group">
+                <label for="inputName">Nome</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Nome" required>
+              </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                                <label for="inputCPF">CPF</label>
-                                <input type="text" class="form-control ls-mask-cpf" id="inputCPF" placeholder="xxx.xxx.xxx.-xx" required>
-                            </div>
-                        <div class="form-group col-md-4">
-                                <label for="inputData">Data de Nascimento</label>
-                                <input type="text" class="form-control ls-mask-date" id="inputData" placeholder="xx/xx/xxxx" required>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="inputIdade">Idade</label>
-                                <input type="text" class="form-control" id="inputIdade" placeholder="xx" required>
-                            </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputCPF">CPF</label>
+                  <input type="text" class="form-control ls-mask-cpf" id="inputCPF" placeholder="xxx.xxx.xxx.-xx"
+                    required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputData">Data de Nascimento</label>
+                  <input type="text" class="form-control ls-mask-date" id="inputData" placeholder="xx/xx/xxxx"
+                    required>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputIdade">Idade</label>
+                  <input type="text" class="form-control" id="inputIdade" placeholder="xx" required>
+                </div>
 
-                    </div>
+              </div>
 
-                    <div class="form-row">
-                    <div class="form-group col-md-4">
-                            <label for="inputNatural">Naturalidade</label>
-                            <input type="text" class="form-control" id="inputNatural" placeholder="Naturalidade" required>
-                        </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputNatural">Naturalidade</label>
+                  <input type="text" class="form-control" id="inputNatural" placeholder="Naturalidade" required>
+                </div>
 
-                        <div class="form-group col-md-3">
-                            <label for="inputSexo">Sexo</label>
-                            <select class="form-control" id="inputSexo" required>
-                                <option selected>Escolha...</option>
-                                <option value="M">Masculino</option>
-                                <option value="F">Feminino</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputCivil">Estado Civil</label>
-                            <select id="inputCivil" class="form-control" required>
-                                <option selected>Escolha...</option>
-                                <option value="Solteiro">Solteiro</option>
-                                <option value="Casado">Casado</option>
-                                <option value="Divorciado">Divorciado</option>
-                                <option value="Viuvo">Viúvo</option>
-                            </select>
-                        </div> 
-                        
-                    </div>
+                <div class="form-group col-md-3">
+                  <label for="inputSexo">Sexo</label>
+                  <select class="form-control" id="inputSexo" required>
+                    <option selected>Escolha...</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputCivil">Estado Civil</label>
+                  <select id="inputCivil" class="form-control" required>
+                    <option selected>Escolha...</option>
+                    <option value="Solteiro">Solteiro</option>
+                    <option value="Casado">Casado</option>
+                    <option value="Divorciado">Divorciado</option>
+                    <option value="Viuvo">Viúvo</option>
+                  </select>
+                </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputTel">Telefone Residencial</label>
-                            <input type="text" class="form-control" id="inputTel" placeholder="" autocomplete="off">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputCel">Celular</label>
-                            <input type="text" class="form-control" id="inputCel" placeholder="(xx) xxxxx-xxxx" autocomplete="off" required>
-                        </div>
-                    </div>
+              </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputProf">Ocupação</label>
-                            <input type="text" class="form-control" id="inputProf">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputEscol">Escolaridade</label >
-                            <select id="inputEscol" class="form-control" required>
-                                <option selected>Escolha...</option>
-                                <option value="SemEscolaridade">Sem escolaridade</option>
-                                <option value="Alfabetização">Alfabetização</option>
-                                <option value="FundamentalIncompleto">Fundamental incompleto</option>
-                                <option value="FundamentalCompleto">Fundamental completo</option>
-                                <option value="EnsinoMedioIncompleto">Ensino médio incompleto</option>
-                                <option value="EnsinoMedioCompleto">Ensino médico completo</option>
-                                <option value="SuperiorIncompleto">Superior incompleto</option>
-                                <option value="SuperiorCompleto">Superior completo</option>
-                            </select>
-                        </div>
-                    </div>  
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputTel">Telefone Residencial</label>
+                  <input type="text" class="form-control" id="inputTel" placeholder="" autocomplete="off">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCel">Celular</label>
+                  <input type="text" class="form-control" id="inputCel" placeholder="(xx) xxxxx-xxxx"
+                    autocomplete="off" required>
+                </div>
+              </div>
 
-                    <div class="form-group col-md-14">
-                            <label for="inputRelig">Religião</label>
-                            <input type="text" class="form-control" id="inputRelig">
-                        </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputProf">Ocupação</label>
+                  <input type="text" class="form-control" id="inputProf">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEscol">Escolaridade</label>
+                  <select id="inputEscol" class="form-control" required>
+                    <option selected>Escolha...</option>
+                    <option value="SemEscolaridade">Sem escolaridade</option>
+                    <option value="Alfabetização">Alfabetização</option>
+                    <option value="FundamentalIncompleto">Fundamental incompleto</option>
+                    <option value="FundamentalCompleto">Fundamental completo</option>
+                    <option value="EnsinoMedioIncompleto">Ensino médio incompleto</option>
+                    <option value="EnsinoMedioCompleto">Ensino médico completo</option>
+                    <option value="SuperiorIncompleto">Superior incompleto</option>
+                    <option value="SuperiorCompleto">Superior completo</option>
+                  </select>
+                </div>
+              </div>
 
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="inputCidade">Cidade</label>
-                                <input type="text" class="form-control" id="inputCidade" required>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputEstado">Estado</label>
-                                <select id="inputEstado" class="form-control" required>
-                                    <option selected>Escolha...</option>
-                                    <option value="Acre">AC</option>
-                                    <option value="Alagoas">AL</option>
-                                    <option value="Amapá">AP</option>
-                                    <option value="Amazonas">AM</option>
-                                    <option value="Bahia">BA</option>
-                                    <option value="Ceará">CE</option>
-                                    <option value="Espírito Santo">ES</option>
-                                    <option value="Goías">GO</option>
-                                    <option value="Maranhão">MA</option>
-                                    <option value="Mato Grosso">MT</option>
-                                    <option value="Mato Grosso do Sul">MS</option>
-                                    <option value="Minas Gerais">MG</option>
-                                    <option value="Pará">PA</option>
-                                    <option value="Paraná">PR</option>
-                                    <option value="Pernambuco">PE</option>
-                                    <option value="Piauí">PI</option>
-                                    <option value="Rio de Janeiro">RJ</option>
-                                    <option value="Rio Grande do Norte">RN</option>
-                                    <option value="Rio Grande do Sul">RS</option>
-                                    <option value="Rondônia">RO</option>
-                                    <option value="Roraima">RR</option>
-                                    <option value="Santa Catarina">SC</option>
-                                    <option value="São Paulo">SP</option>
-                                    <option value="Sergipe">SE</option>
-                                    <option value="Tocantins">TO</option>
-                                    <option value="Distrito Federal">DF</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputZip">Cep</label>
-                                <input type="text" class="form-control" id="inputZip">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputAddress">Endereço</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="Travessa Primeiro de Março">
-                            </div>
+              <div class="form-group col-md-14">
+                <label for="inputRelig">Religião</label>
+                <input type="text" class="form-control" id="inputRelig">
+              </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="inputBairro">Bairro</label>
-                                <input type="text" class="form-control" id="inputBairro" placeholder="Campina">
-                            </div>
-                        </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputCidade">Cidade</label>
+                  <input type="text" class="form-control" id="inputCidade" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputEstado">Estado</label>
+                  <select id="inputEstado" class="form-control" required>
+                    <option selected>Escolha...</option>
+                    <option value="Acre">AC</option>
+                    <option value="Alagoas">AL</option>
+                    <option value="Amapá">AP</option>
+                    <option value="Amazonas">AM</option>
+                    <option value="Bahia">BA</option>
+                    <option value="Ceará">CE</option>
+                    <option value="Espírito Santo">ES</option>
+                    <option value="Goías">GO</option>
+                    <option value="Maranhão">MA</option>
+                    <option value="Mato Grosso">MT</option>
+                    <option value="Mato Grosso do Sul">MS</option>
+                    <option value="Minas Gerais">MG</option>
+                    <option value="Pará">PA</option>
+                    <option value="Paraná">PR</option>
+                    <option value="Pernambuco">PE</option>
+                    <option value="Piauí">PI</option>
+                    <option value="Rio de Janeiro">RJ</option>
+                    <option value="Rio Grande do Norte">RN</option>
+                    <option value="Rio Grande do Sul">RS</option>
+                    <option value="Rondônia">RO</option>
+                    <option value="Roraima">RR</option>
+                    <option value="Santa Catarina">SC</option>
+                    <option value="São Paulo">SP</option>
+                    <option value="Sergipe">SE</option>
+                    <option value="Tocantins">TO</option>
+                    <option value="Distrito Federal">DF</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputZip">Cep</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputAddress">Endereço</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Travessa Primeiro de Março">
+                </div>
 
-                        <div class="form-group">
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" required> Confirme
-                                </label>
-                            </div>
-                        </div>
+                <div class="form-group col-md-6">
+                  <label for="inputBairro">Bairro</label>
+                  <input type="text" class="form-control" id="inputBairro" placeholder="Campina">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" required> Confirme
+                  </label>
+                </div>
+              </div>
             </form>
+
+            <div class="section-footer">
+              <button type="submit" class="btn btn-primary" style="color: #fff;" id="btn-form">Salvar</button>
+
+            </div>
+          </div>
+
           </div>
         </section>
       </div>
-      <footer class="main-footer">
-        <div class="footer-left">
-          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
-        </div>
-        <div class="footer-right">
-          
-        </div>
-      </footer>
+      
     </div>
   </div>
 
