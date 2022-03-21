@@ -272,10 +272,9 @@
             <li class="dropdown active">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               <ul class="dropdown-menu">
-                <li ><a class="nav-link" href="index.html">Início</a></li>
+                <li><a class="nav-link" href="index.html">Início</a></li>
                 <li><a class="nav-link" href="pacientes.html">Pacientes</a></li>
-                <li class=active><a class="nav-link" href="avaliar.html">Prontuario</a></li>
-                <li><a class="nav-link" href="escalas.html">Escalas</a></li>
+                <li class=active><a class="nav-link" href="avaliar.html">Prontuário</a></li>
                 <li><a class="nav-link" href="evoluir.html">Evolução</a></li>
               </ul>
             </li>
@@ -296,6 +295,10 @@
           padding: 2rem;
         }
 
+        .form-control {
+          height: 20px;
+        }
+
         .section-footer {
 
           padding: 1rem;
@@ -305,10 +308,6 @@
           width: 40rem;
           height: 10rem;
         }
-
-      
-
-
       </style>
       <!--Css Area End-->
 
@@ -321,36 +320,43 @@
 
           <div class="section-form">
 
-            <div class="">
+
+            <div class="card-body">
               <div class="row">
-                <div class="col-6 col-sm-4 col-md-2">
-                  <ul class="nav nav-pills flex-column" id="myTab4" role="tablist">
+                <div class="col-12 col-sm-12 col-md-4">
+                  <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="home-tab1" data-toggle="tab" href="#home1" role="tab"
-                        aria-controls="home" aria-selected="true">Anamnese</a>
+                      <a class="nav-link active" id="home-tab1" data-toggle="tab" href="#home" role="tab"
+                        aria-controls="Anamnese" aria-selected="true">Anamnese</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="div-tab2" data-toggle="tab" href="#tab2" role="tab"
-                        aria-controls="profile" aria-selected="false">Exame Físico</a>
+                      <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#tab2" role="tab"
+                        aria-controls="Exame Físico" aria-selected="false">Exame Físico</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="div-tab3" data-toggle="tab" href="#tab3" role="tab"
-                        aria-controls="profile" aria-selected="false">Teste Ortopédicos</a>
+                      <a class="nav-link" id="profile-tab3" data-toggle="tab" href="#tab3" role="tab"
+                        aria-controls="Testes Ortopédicos" aria-selected="false">Testes Ortopédicos</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="div-tab4" data-toggle="tab" href="#tab4" role="tab"
-                        aria-controls="profile" aria-selected="false">Hipótese Diagnóstica</a>
+                      <a class="nav-link" id="profile-tab4" data-toggle="tab" href="#tab4" role="tab"
+                        aria-controls="Escalas Funcionais" aria-selected="false">Escalas Funcionais</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="div-tab5" data-toggle="tab" href="#tab5" role="tab"
-                        aria-controls="profile" aria-selected="false">Tomada de Decisão</a>
+                      <a class="nav-link" id="profile-tab5" data-toggle="tab" href="#tab5" role="tab"
+                        aria-controls="Hipótese Diagnóstica" aria-selected="false">Hipótese Diagnóstica</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab5" data-toggle="tab" href="#tab5" role="tab"
+                        aria-controls="Tomada de Decisão" aria-selected="false">Tomada de Decisão</a>
                     </li>
                   </ul>
+                  <!--Final myTab-->
                 </div>
+                <!--Final col-12-->
                 <div class="col-12 col-sm-12 col-md-8">
-                  <div class="tab-content no-padding" id="myTab2Content">
-                    <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab1">
-                      <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                  <div class="tab-content no-padding" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab1">
+                      <form action="" autocomplete="off" data-ls-module="form" id="forms">
                         <div class="form-group">
                           <label for="inputName">Queixa Principal</label>
                           <input type="text" class="form-control" id="inputName" required>
@@ -364,36 +370,36 @@
                           <label for="inputName">Histórico Familiar</label>
                           <input type="text" class="form-control" id="inputName" required>
 
-                          <label for="inputName">Doenças Cronicas</label>
+                          <label for="inputName">Doenças Crônicas</label>
                           <input type="text" class="form-control" id="inputName" required>
 
                           <label for="inputName">Medicamentos</label>
                           <input type="text" class="form-control" id="inputName" required>
 
-                          <label for="inputName">Procedimentos Cirúgicos</label>
+                          <label for="inputName">Procedimentos Cirúrgicos</label>
                           <input type="text" class="form-control" id="inputName" required>
 
-                         <div class="form-row">
-                          <div class="form-group col-md-4" >
-                            <label for="inputName">Exames Complementares</label>
-                            <input type="text" class="form-control" id="inputName" required style="width: 25rem;">
+                          <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label for="inputName">Exames Complementares</label>
+                              <input type="text" class="form-control" id="inputName" required style="width: 25rem;">
+                            </div>
+                            <div class="form-group col-md-4" id="fileDrop" style="margin-left:10rem;">
+                              <label>File</label>
+                              <input type="file" class="form-control">
+                            </div>
                           </div>
-                          <div class="form-group col-md-4" id="fileDrop" style="margin-left:10rem;">
-                            <label>File</label>
-                            <input type="file" class="form-control">
-                          </div>  
-                         </div>
 
                           <label for="inputName">Atividades de Vida Diária e Lazer</label>
                           <input type="text" class="form-control" id="inputName" required>
 
-                          <label for="inputName">Tabagismos</label>
+                          <label for="inputName">Tabagismo</label>
                           <input type="text" class="form-control" id="inputName" required>
 
-                          <label for="inputName">Consumo de Alcool/Outras Drogas</label>
+                          <label for="inputName">Consumo de Álcool/Outras Drogas</label>
                           <input type="text" class="form-control" id="inputName" required>
 
-                          <label for="inputName">Praticas de Atividades Físicas </label>
+                          <label for="inputName">Práticas de Atividades Físicas </label>
                           <input type="text" class="form-control" id="inputName" required>
 
                           <label for="inputName">Alimentação</label>
@@ -403,114 +409,887 @@
                           <input type="text" class="form-control" id="inputName" required>
 
                           <div class="form-group">
-                            <label>Intencidade da Dor</label>
+                            <label>Intensidade da Dor</label>
                             <input type="range" class="form-control">
                           </div>
 
-                          <label for="inputName">Caracteristicas Álgicas</label>
+                          <label for="inputName">Características Álgicas</label>
                           <input type="text" class="form-control" id="inputName" required>
 
-                          <label for="inputName">Manifestações Sistemicás</label>
+                          <label for="inputName">Manifestações Sistêmicas</label>
+                          <input type="text" class="form-control" id="inputName" required>
+                          
+                          <label for="inputName">Anotações Complementares</label>
+                          <input type="text" class="form-control" id="inputName" required>
+                        </div>  <!--Final form-group-->
+                      </form> <!--Final forms-->
+                    </div>  <!--Final Tab-Home-->
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="profile-tab2">
+                      <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                        <div class="form-row">
+                          <div class="form-group col-md-2">
+                            <label for="inputCPF">PA</label>
+                            <input type="text" class="form-control ls-mask-cpf" id="inputCPF" required>
+                          </div>
+                          <!--Final form-group-->
+                          <div class="form-group col-md-2">
+                            <label for="inputData">FC</label>
+                            <input type="text" class="form-control" id="inputData" required>
+                          </div>
+                          <!--Final form-group-->
+                          <div class="form-group col-md-2">
+                            <label for="inputCPF">SPO2</label>
+                            <input type="text" class="form-control" id="inputCPF" required>
+                          </div>
+                          <!--Final form-group-->
+                          <div class="form-group col-md-2">
+                            <label for="inputData">FR</label>
+                            <input type="text" class="form-control" id="inputData" required>
+                          </div>
+                          <!--Final form-group-->
+                          <div class="form-group col-2">
+                            <label for="inputIdade">T</label>
+                            <input type="text" class="form-control" id="inputIdade" required>
+                          </div>
+                          <!--Final form-group-->
+                        </div>
+                        <!--Final form-row-->
+                        <div class="form-row">
+                          <div class="form-group col-2">
+                            <label for="inputCPF">Peso</label>
+                            <input type="text" class="form-control" id="inputCPF" required>
+                          </div>
+                          <!--Final form-group-->
+                          <div class="form-group col-2">
+                            <label for="inputData">Altura</label>
+                            <input type="text" class="form-control" id="inputData" required>
+                          </div>
+                          <!--Final form-group-->
+                          <div class="form-group col-md-3">
+                            <label for="inputCPF">Medida do Cintura</label>
+                            <input type="text" class="form-control" id="inputCPF" required>
+                          </div>
+                          <!--Final form-group-->
+                          <div class="form-group col-3">
+                            <label for="inputIdade">Medida do Quadril</label>
+                            <input type="text" class="form-control" id="inputIdade" required>
+                          </div>
+                          <!--Final form-group-->
+                        </div>
+                        <!--Final form-row-->
+                        <div class="score-tab2 ">
+
+                          <!--Css Area-->
+                        <style>
+                          .card-header{
+                            text-align: center;
+                          }
+                          #imc1 {
+                            font-size: 1rem;
+                          }
+
+                          #imc2 {
+                            font-size: 2rem;
+                          }
+                        </style>
+                        <!--Css Area-->
+
+                        <div class="row">
+                          <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card card-primary">
+                              <div class="card-header">
+                                <h4>IMC</h4>
+                              </div>
+                              <div class="card-body">
+                                <h3>90.7</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card card-secondary">
+                              <div class="card-header">
+                                <h4>RCE</h4>
+                              </div>
+                              <div class="card-body">
+                                <h3>80.3</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card card-danger">
+                              <div class="card-header">
+                                <h4>RCQ</h4>
+                              </div>
+                              <div class="card-body">
+                                <h3>100.00</h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  <!--Final score-tab2-->
+                      </form> <!--Final form-tab2-->
+                      <div class="form-group">
+                        <label for="inputName">Inspeção Específica</label>
+                        <input type="text" class="form-control" id="inputName" required>
+
+                        <label for="inputName">Palpação</label>
+                        <input type="text" class="form-control" id="inputName" required>
+
+                        <label for="inputName">Teste de Força Muscular</label>
+                        <input type="text" class="form-control" id="inputName" required>
+
+                        <label for="inputName">Testes de Sensibilidade</label>
+                        <input type="text" class="form-control" id="inputName" required>
+
+                        <label for="inputName">Exame da Marcha</label>
+                        <input type="text" class="form-control" id="inputName" required>
+
+                        <label for="inputName">Anotações Complementares</label>
+                        <input type="text" class="form-control" id="inputName" required>
+                      </div>  <!--Final form-group-->
+                    </div>  <!--Final Tab2-->
+                    <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="profile-tab3">
+                      <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label for="inputName">Testes para Coluna Vertebral</label>
                           <input type="text" class="form-control" id="inputName" required>
                         </div>
+                        <div class="form-group">
+                          <label for="inputName">Testes para Membros Superiores</label>
+                          <input type="text" class="form-control" id="inputName" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputName">Testes para Membros Inferiores</label>
+                          <input type="text" class="form-control" id="inputName" required>
+                        </div>
+                      </form>
                     </div>
-                    </form>
-                  </div>
-
-                  <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="div-tab2">
-                    <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                    <!--Final Tab3-->
+                    <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="profile-tab4">
+                    <form autocomplete=" off" data-ls-module="form" id="forms" style="padding-top: 2rem;">
                       <div class="form-group">
-                        <label for="inputName">Queixa Principal</label>
-                        <input type="text" class="form-control" id="inputName" required>
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-4">
-                          <label for="inputCPF">CPF</label>
-                          <input type="text" class="form-control ls-mask-cpf" id="inputCPF"
-                            placeholder="xxx.xxx.xxx.-xx" required>
-                        </div>
-                        <div class="form-group col-md-4">
-                          <label for="inputData">Data de Nascimento</label>
-                          <input type="text" class="form-control ls-mask-date" id="inputData" placeholder="xx/xx/xxxx"
-                            required>
-                        </div>
-                        <div class="form-group col-md-2">
-                          <label for="inputIdade">Idade</label>
-                          <input type="text" class="form-control" id="inputIdade" placeholder="xx" required>
+                        <label class="d-block">
+                          <h5> 1. Posição sentada para posição em pé. <br>
+                            Instruções: Por favor, levante-se. Tente não usar suas mãos para se apoiar.</h5>
+                        </label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="level4" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            4 capaz de levantar-se sem utilizar as mãos e estabilizar-se independentemente.
+                          </label>
                         </div>
 
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-4">
-                          <label for="inputNatural">Naturalidade</label>
-                          <input type="text" class="form-control" id="inputNatural" placeholder="Naturalidade" required>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
+                          <label class="form-check-label" for="exampleRadios2">
+                            3 capaz de levantar-se independentemente e estabilizar-se independentemente.
+                          </label>
                         </div>
 
-                        <div class="form-group col-md-3">
-                          <label for="inputSexo">Sexo</label>
-                          <select class="form-control" id="inputSexo" required>
-                            <option selected>Escolha...</option>
-                            <option value="M">Masculino</option>
-                            <option value="F">Feminino</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-4">
-                          <label for="inputCivil">Estado Civil</label>
-                          <select id="inputCivil" class="form-control" required>
-                            <option selected>Escolha...</option>
-                            <option value="Solteiro">Solteiro</option>
-                            <option value="Casado">Casado</option>
-                            <option value="Divorciado">Divorciado</option>
-                            <option value="Viuvo">Viúvo</option>
-                          </select>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
+                          <label class="form-check-label" for="exampleRadios2">
+                            2 capaz de levantar-se utilizando as mãos após diversas tentativas. </label>
                         </div>
 
-                      </div>
-                    </form>
-                  </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
+                          <label class="form-check-label" for="exampleRadios2">
+                            1 necessita de ajuda mínima para levantar-se ou estabilizar-se. </label>
+                        </div>
 
-                  <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="div-tab3">
-                    <form autocomplete="off" action="" data-ls-module="form" id="forms">
-                      <div class="form-group">
-                        <label for="inputName">Testes para Coluna Vertebral</label>
-                        <input type="text" class="form-control" id="inputName" required>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
+                          <label class="form-check-label" for="exampleRadios2">
+                            0 necessita de ajuda moderada ou máxima para levantar-se. </label>
+                        </div>
                       </div>
-                      <div class="form-group">
-                        <label for="inputName">Testes para Membros Superiores</label>
-                        <input type="text" class="form-control" id="inputName" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputName">Testes para Membros Inferiores</label>
-                        <input type="text" class="form-control" id="inputName" required>
-                      </div>
-                  </div>
-                  </form>
+                      </form>
+                      <!--Final form 1-->
 
-                  <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="div-tab4">
-                    <form autocomplete="off" action="" data-ls-module="form" id="forms">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="inputName" required>
-                      </div>
-                    </form>
-                  </div>
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>2. Permanecer em pé sem apoio <br>
+                              Instruções: Por favor, fique em pé por 2 minutos sem se apoiar.</h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de permanecer em pé com segurança por 2 minutos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de permanecer em pé por 2 minutos com supervisão.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de permanecer em pé por 30 segundos sem apoio.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 necessita de várias tentativas para permanecer em pé por 30 segundos sem apoio.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 incapaz de permanecer em pé por 30 segundos sem apoio.
+                            </label>
+                          </div>
 
-                  <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="div-tab5">
-                    <form autocomplete="off" action="" data-ls-module="form" id="forms">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="inputName" required>
+                          <span style="color: rgb(241, 71, 71);">
+                            <h6 style="padding-top: 0.5rem;">OBS: Se o paciente for capaz de permanecer em pé por 2
+                              minutos sem
+                              apoio, dê o número total de
+                              pontos para o item 3. Continue com o item 4.</h6>
+                          </span>
+                        </div>
+                      </form>
+                      <!--Final form 2-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>3. Permanecer sentado sem apoio nas costas, mas com os pés apoiados no chão ou num
+                              banquinho. <br>
+                              Instruções: Por favor, fique sentado sem apoiar as costas, com os braços cruzados, por 2
+                              minutos.</h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de permanecer sentado com segurança e com firmeza por 2 minutos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de permanecer sentado por 2 minutos com supervisão.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de permanecer sentado por 30 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 capaz de permanecer sentado por 10 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 incapaz de permanecer sentado sem apoio por 10 segundos. </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 3-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>4. Posição em pé para posição sentada. <br>
+                              Instruções: Por favor, sente-se.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 senta-se com segurança, com uso mínimo das mãos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 controla a descida utilizando as mãos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 utiliza a parte posterior das pernas contra a cadeira para controlar a descida.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 senta-se independentemente, mas tem descida sem controle.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 necessita de ajuda para sentar-se.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 4-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>5. Transferências. <br>
+                              Instruções: Arrume as cadeiras perpendicularmente ou uma de frente para a outra, para
+                              uma transferência em pivô. Peça ao paciente que se transfira de uma cadeira com apoio
+                              de braço para uma cadeira sem apoio de braço, e vice-versa. Você poderá utilizar duas
+                              cadeiras ou uma cama e uma cadeira.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de transferir-se com segurança com uso mínimo das mãos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de transferir-se com segurança com o uso das mãos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de transferir-se seguindo orientações verbais e/ou supervisão.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 necessita de uma pessoa para ajudar.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 necessita de duas pessoas para ajudar ou supervisionar a tarefa com segurança.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 5-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>6. Permanecer em pé sem apoio com os olhos fechados. <br>
+                              Instruções: Por favor, fique em pé e feche os olhos por 10 segundos.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de permanecer em pé por 10 segundos com segurança.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de permanecer em pé por 10 segundos com supervisão.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de permanecer em pé por 3 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 incapaz de permanecer com os olhos fechados durante 3 segundos, mas mantém-se em
+                              pé.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 necessita de ajuda para não cair.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 6-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>7. Permanecer em pé sem apoio com os pés juntos. <br>
+                              Instruções: Junte seus pés e fique em pé sem se apoiar.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de posicionar os pés juntos, independentemente, e permanecer por 1 minuto com
+                              segurança.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de posicionar os pés juntos, independentemente, e permanecer por 1 minuto com
+                              supervisão.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de posicionar os pés juntos, independentemente, e permanecer por 30 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 necessita de ajuda para posicionar-se, mas é capaz de permanecer com os pés juntos
+                              durante 15 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 necessita de ajuda para posicionar-se e é incapaz de permanecer nessa posição por 15
+                              segundos.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 7-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>8. Alcançar à frente com o braço estendido, permanecendo em pé. <br>
+                              Instruções: Levante o braço a 90º. Estique os dedos e tente alcançar à frente o mais longe
+                              possível. O examinador posiciona a régua no fim da ponta dos dedos quando o braço
+                              estiver a 90º. Ao serem esticados para frente, os dedos não devem tocar a régua. A
+                              medida a ser registrada é a distância que os dedos conseguem alcançar quando o
+                              paciente se inclina para frente o máximo que consegue. Quando possível peça ao paciente
+                              que use ambos os braços, para evitar rotação do tronco.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 pode avançar à frente mais que 25cm com segurança.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 pode avançar à frente mais que 12,5cm com segurança.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 pode avançar à frente mais que 5cm com segurança.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 pode avançar à frente, mas necessita de supervisão.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 perde o equilíbrio na tentativa, ou necessita de apoio externo.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 8-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>9. Pegar um objeto do chão a partir de uma posição em pé. <br>
+                              Instruções: Pegue o sapato/chinelo que está na frente dos seus pés.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de pegar o chinelo com facilidade e segurança.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de pegar o chinelo, mas necessita de supervisão.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 incapaz de pegá-lo mas se estica, até ficar a 2-5cm do chinelo, e mantém o equilíbrio
+                              independentemente. </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 incapaz de pegá-lo, necessitando de supervisão enquanto está tentando.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 incapaz de tentar, ou necessita de ajuda para não perder o equilíbrio ou cair.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 9-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>10.Virar-se e olhar para trás por cima dos ombros direito e esquerdo enquanto permanece
+                              em
+                              pé. <br>
+                              Instruções: Vire-se para olhar diretamente atrás de você por cima do ombro esquerdo, sem
+                              tirar os pés do chão. Faça o mesmo por cima do ombro direito. O examinador poderá
+                              pegar um objeto e posicioná-lo diretamente atrás do paciente para estimular o movimento.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 olha para trás de ambos os lados com boa distribuição do peso.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 olha para trás somente de um lado; o lado contrário demonstra menor distribuição do
+                              peso.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 vira somente para os lados, mas mantém o equilíbrio.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 necessita de supervisão para virar.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 necessita de ajuda para não perder o equilíbrio ou cair.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 10-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>11.Girar 360º <br>
+                              Instruções: Gire completamente em torno de si mesmo. Pausa. Gire completamente em
+                              torno de si mesmo para o lado contrário.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de girar 360º com segurança em 4 segundos ou menos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de girar 360º com segurança somente para um lado em 4 segundos ou menos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de girar 360º com segurança, mas lentamente.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 necessita de supervisão próxima ou orientações verbais.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 necessita de ajuda enquanto gira.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 11-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>12.Posicionar os pés alternadamente no degrau ou banquinho enquanto permanece em pé
+                              sem apoio. <br>
+                              Instruções: Toque cada pé alternadamente no degrau/banquinho. Continue até que cada
+                              pé tenha tocado o degrau/banquinho 4 vezes.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de permanecer em pé independentemente e com segurança, completando 8
+                              movimentos em 20 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de permanecer em pé independentemente e completar 8 movimentos em mais de
+                              20 segundos.</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de completar 4 movimentos sem ajuda.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 capaz de completar mais de 2 movimentos com o mínimo de ajuda.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 incapaz de tentar ou necessita de ajuda para não cair.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 12-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>13.Permanecer em pé sem apoio com um pé à frente. <br>
+                              Instruções: Demonstre para o paciente. Coloque um pé diretamente à frente do outro na
+                              mesma linha; se você achar que não irá conseguir, coloque o pé um pouco mais à frente
+                              do outro pé e levemente para o lado.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de colocar um pé imediatamente à frente do outro, independentemente, e
+                              permanecer por 30 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de colocar um pé um pouco mais à frente do outro e levemente para o lado,
+                              independentemente, e permanecer por 30 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de dar um pequeno passo, independentemente, e permanecer por 30 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 necessita de ajuda para dar o passo, porém permanece por 15 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 perde o equilíbrio ao tentar dar um passo ou ficar em pé.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 13-->
+
+                      <form autocomplete="off" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5>14.Permanecer em pé sobre uma perna. <br>
+                              Instruções: Fique em pé sobre uma perna o máximo que você puder sem se segurar.
+                            </h5>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de levantar uma perna, independentemente, e permanecer por mais de 10
+                              segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de levantar uma perna, independentemente, e permanecer por 5-10 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de levantar uma perna, independentemente, e permanecer por 3 ou4 segundos.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 tenta levantar uma perna, mas é incapaz de permanecer por 3 segundos, embora
+                              permaneça em pé independentemente.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 incapaz de tentar, ou necessita de ajuda para não cair.
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                      <!--Final form 14-->
+
+                      <!--Css Area-->
+                      <style>
+                        #header1 {
+                          font-size: 3rem;
+                        }
+
+                        #header2 {
+                          font-size: 6rem;
+                        }
+                      </style>
+                      <!--Css Area-->
+
+                      <div class="col-12 mb-4">
+                        <div class="hero align-items-center bg-primary text-white">
+                          <div class="hero-inner text-center">
+                            <h3 id="header1">Score:</h3>
+                            <p class="lead"></p>
+                            <h1 id="header2">30</h1>
+                          </div>
+                        </div>
                       </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+                    </div>
+                    <!--Final Tab4-->
+                    <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="profile-tab5">
+                      <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="inputName" required>
+                        </div>
+                      </form>
+                    </div>
+                    <!--Final Tab5-->
+                    <div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="profile-tab6">
+                      <form autocomplete="off" action="" data-ls-module="form" id="forms">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="inputName" required>
+                        </div>
+                      </form>
+                    </div>  <!--Final Tab6-->
+                  </div>  <!--Final TabContent-->
+                  <div class="section-footer">
+                    <button type="submit" class="btn btn-primary float-right" style="color: #fff;" id="btn-form">Salvar</button>
+                  </div>  <!--Final btn-->
+                </div>  <!--Final col-12-->
+              </div>  <!--Final row-->
+            </div>  <!--Final card-body-->
+
+
           </div>
       </div>
-      <div class="section-footer">
-        <button type="submit" class="btn btn-primary" style="color: #fff;" id="btn-form">Salvar</button>
-      </div>
+
     </div>
 
   </div>
