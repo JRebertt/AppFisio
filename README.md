@@ -3,15 +3,12 @@ Stisla is Free Bootstrap Admin Template and will help you to speed up your proje
 
 More info: https://getstisla.com
 
-![Stisla Preview](https://i.ibb.co/6tdmcX0/2018-11-11-15-35-getstisla-com.png)
+![AppFisio Preview](https://i.ibb.co/JpzqWfh/appfisio.png)
 
 # Roadmap
-You can find the Stisla road map here: https://trello.com/b/M8TMnehE/stisla-roadmap
 
 C:\Users\joaor\OneDrive\Documentos\Projeto Fisio\NovoDash\dist
 
 # Contributing
-The contribution guide is still in progress :)
 
 # License
-Stisla is under the MIT license
