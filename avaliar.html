@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/components.css">
   <!-- Start GA -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+  <script async src="/assets/js/calc.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -106,7 +107,7 @@
           </div>
         </form>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+          <!-- <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
               class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
               <div class="dropdown-header">Messages
@@ -232,7 +233,7 @@
                 <a href="#">Ver Todos <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
-          </li>
+          </li> -->
           <li class="dropdown"><a href="#" data-toggle="dropdown"
               class="nav-link dropdown-toggle nav-link-lg nav-link-user">
               <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
@@ -379,16 +380,9 @@
                           <label for="inputName">Procedimentos Cirúrgicos</label>
                           <input type="text" class="form-control" id="inputName" required>
 
-                          <div class="form-row">
-                            <div class="form-group col-md-4">
-                              <label for="inputName">Exames Complementares</label>
-                              <input type="text" class="form-control" id="inputName" required style="width: 25rem;">
-                            </div>
-                            <div class="form-group col-md-4" id="fileDrop" style="margin-left:10rem;">
-                              <label>File</label>
-                              <input type="file" class="form-control">
-                            </div>
-                          </div>
+                          <label for="inputName">Exames Complementares</label>
+                            <input type="text" class="form-control" id="inputName" required>
+                            
 
                           <label for="inputName">Atividades de Vida Diária e Lazer</label>
                           <input type="text" class="form-control" id="inputName" required>
@@ -421,6 +415,11 @@
                           
                           <label for="inputName">Anotações Complementares</label>
                           <input type="text" class="form-control" id="inputName" required>
+                          
+                          <div class="form-group col-md-4" id="fileDrop"">
+                            <label>File</label>
+                            <input type="file" class="form-control">
+                          </div>
                         </div>  <!--Final form-group-->
                       </form> <!--Final forms-->
                     </div>  <!--Final Tab-Home-->
@@ -456,23 +455,23 @@
                         <!--Final form-row-->
                         <div class="form-row">
                           <div class="form-group col-2">
-                            <label for="inputCPF">Peso</label>
-                            <input type="text" class="form-control" id="inputCPF" required>
+                            <label for="inputPeso">Peso</label>
+                            <input type="number" class="form-control" id="inputPeso" required>
                           </div>
                           <!--Final form-group-->
                           <div class="form-group col-2">
-                            <label for="inputData">Altura</label>
-                            <input type="text" class="form-control" id="inputData" required>
+                            <label for="inputAlt">Altura</label>
+                            <input type="number" class="form-control" id="inputAlt" required>
                           </div>
                           <!--Final form-group-->
                           <div class="form-group col-md-3">
-                            <label for="inputCPF">Medida do Cintura</label>
-                            <input type="text" class="form-control" id="inputCPF" required>
+                            <label for="inputMC">Medida do Cintura</label>
+                            <input type="number" class="form-control" id="inputMC" required>
                           </div>
                           <!--Final form-group-->
                           <div class="form-group col-3">
-                            <label for="inputIdade">Medida do Quadril</label>
-                            <input type="text" class="form-control" id="inputIdade" required>
+                            <label for="inputMQ">Medida do Quadril</label>
+                            <input type="number" class="form-control" id="inputMQ" required>
                           </div>
                           <!--Final form-group-->
                         </div>
@@ -541,11 +540,20 @@
                         <label for="inputName">Testes de Sensibilidade</label>
                         <input type="text" class="form-control" id="inputName" required>
 
+                        <label for="inputName">Avaliação Postural</label>
+                        <input type="text" class="form-control" id="inputName" required>
+
                         <label for="inputName">Exame da Marcha</label>
                         <input type="text" class="form-control" id="inputName" required>
 
                         <label for="inputName">Anotações Complementares</label>
                         <input type="text" class="form-control" id="inputName" required>
+
+                        <div class="form-group col-md-4" id="fileDrop">
+                          <label>File</label>
+                          <input type="file" class="form-control">
+                        </div>
+
                       </div>  <!--Final form-group-->
                     </div>  <!--Final Tab2-->
                     <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="profile-tab3">
