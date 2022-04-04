@@ -295,6 +295,22 @@
             <h1>Evolução</h1>
           </div>
 
+          <div class="content-paciente">
+            <div class="card card-warning">
+              <div class="card-header">
+                <h4>Selecione um Paciente</h4>
+                <form class="card-header-form">
+                </form>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="input-group" id="contentPacientes">
+                  </div>
+                </div>
+              </div>
+            </div>  <!--Pacientes Select-->
+          </div>
+
           <div class="row">
             <div class="col-12">
               <div class="card">
@@ -347,12 +363,24 @@
   <script src="assets/modules/codemirror/lib/codemirror.js"></script>
   <script src="assets/modules/codemirror/mode/javascript/javascript.js"></script>
   <script src="assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
 
   <!-- Page Specific JS File -->
 
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/data/firebase.js"></script>
+  <script src="assets/data/select.js"></script>
+
 </body>
 
 </html>

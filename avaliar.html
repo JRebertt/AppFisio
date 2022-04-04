@@ -273,10 +273,11 @@
             <li class="dropdown active">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="index.html">Início</a></li>
+                <li><a class="nav-link" href="home.html">Início</a></li>
                 <li><a class="nav-link" href="pacientes.html">Pacientes</a></li>
                 <li class=active><a class="nav-link" href="avaliar.html">Prontuário</a></li>
                 <li><a class="nav-link" href="evoluir.html">Evolução</a></li>
+                <li><a class="nav-link" href="historico.html">Histórico</a></li>
               </ul>
             </li>
           </ul>
@@ -318,6 +319,20 @@
           <div class="section-header">
             <h1>Avaliação</h1>
           </div>
+
+          <div class="card card-warning">
+            <div class="card-header">
+              <h4>Selecione um Paciente</h4>
+              <form class="card-header-form">
+              </form>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="input-group" id="contentPacientes">
+                </div>
+              </div>
+            </div>
+          </div>  <!--Pacientes Select-->
 
           <div class="section-form">
 
@@ -575,6 +590,7 @@
                     <!--Final Tab3-->
                     <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="profile-tab4">
                     <form autocomplete=" off" data-ls-module="form" id="forms" style="padding-top: 2rem;">
+                      <h2>Escala de Equilíbrio de Berg</h2>
                       <div class="form-group">
                         <label class="d-block">
                           <h5> 1. Posição sentada para posição em pé. <br>
@@ -1318,11 +1334,23 @@
 
   <!-- JS Libraies -->
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
+
   <!-- Page Specific JS File -->
 
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/data/firebase.js"></script>
+  <script src="assets/data/select.js"></script>
+
 </body>
 
 </html>

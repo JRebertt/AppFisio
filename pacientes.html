@@ -313,72 +313,6 @@
                     <div class="table-responsive">
                       <table class="table table-striped" id="lisTable">
                         <tr>
-                          <!-- <th>
-                            <div class="custom-checkbox custom-control">
-                              <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
-                              <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                            </div>
-                          </th> 
-                        -->
-                          <th>Id</th>
-                          <th>Nome</th>
-                          <th>Cpf</th>
-                          <th>Progresso</th>
-                          <th>Data</th>
-                          <th>Status</th>
-                          <th>Interação</th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                        </tr>
-
-                        <!-- <tr>
-                          <td class="p-0 text-center">
-                            <div class="custom-checkbox custom-control">
-                              <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
-                              <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
-                            </div>
-                          </td>
-                          <td>1</td>
-                          <td>David</td>
-                          <td>827.251.600-49</td>
-                          <td class="align-middle">
-                            <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
-                              <div class="progress-bar bg-success" data-width="100"></div>
-                            </div>
-                          </td>
-                          <td>2021-01-20</td>
-                          <td><div class="badge badge-danger">Off</div></td>
-                          <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
-                          <td><a href="avaliar.html" class="btn btn-warning">Avaliar</a></td>
-                          <td><a href="evoluir.html" class="btn btn-primary">Evoluir</a></td>
-                          <td><a href="historico.html" class="btn btn-info">Historico</a></td>
-                          <td><button class="btn btn-danger btn-del">Apagar</button></td>
-                        </tr>
-                        <tr>
-                          <td class="p-0 text-center">
-                            <div class="custom-checkbox custom-control">
-                              <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
-                              <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
-                            </div>
-                          </td>
-                          <td>2</td>
-                          <td>Isabella</td>
-                          <td>230.760.260-70</td>
-                          <td class="align-middle">
-                            <div class="progress" data-height="4" data-toggle="tooltip" title="0%">
-                              <div class="progress-bar" data-width="0"></div>
-                            </div>
-                          </td>
-                          <td>2021-04-10</td>
-                          <td><div class="badge badge-success">On</div></td>
-                          <td><a href="#" class="btn btn-secondary">Detalhes</a></td>
-                          <td><a href="avaliar.html" class="btn btn-warning">Avaliar</a></td>
-                          <td><a href="evoluir.html" class="btn btn-primary">Evoluir</a></td>
-                          <td><a href="historico.html" class="btn btn-info">Historico</a></td>
-                          <td><button class="btn btn-danger btn-del">Apagar</button></td>
-                        </tr> -->
                       </table>
                     </div>
                   </div>
@@ -396,7 +330,7 @@
       <!-- <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande</button> -->
 
       <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
-        aria-hidden="true">
+        aria-hidden="true" aria-required="true">
         <div class="modal-dialog modal-xl" style="max-width: 80%;" id="modal-size">
           <div class="modal-content">
             <div class="modal-header">
@@ -406,26 +340,26 @@
               </button>
             </div>
             <div class="modal-body">
-              <form autocomplete="off" action="" data-ls-module="form" id="forms" method="POST">
+              <form autocomplete="off" action="post" data-ls-module="form" id="forms" method="POST">
                 <div class="form-group">
                   <label for="inputName">Nome</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Nome" required>
+                  <input type="text" class="form-control" id="inputName" placeholder="Nome" >
                 </div>
 
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="inputCPF">CPF</label>
                     <input type="text" class="form-control ls-mask-cpf" id="inputCPF" placeholder="xxx.xxx.xxx.-xx"
-                      required>
+                      >
                   </div>
                   <div class="form-group col-md-4">
                     <label for="inputData">Data de Nascimento</label>
                     <input type="text" class="form-control ls-mask-date" id="inputData" placeholder="xx/xx/xxxx"
-                      required>
+                      >
                   </div>
                   <div class="form-group col-md-2">
                     <label for="inputIdade">Idade</label>
-                    <input type="text" class="form-control" id="inputIdade" placeholder="xx" required>
+                    <input type="text" class="form-control" id="inputIdade" placeholder="xx" >
                   </div>
 
                 </div>
@@ -438,7 +372,7 @@
 
                   <div class="form-group col-md-3">
                     <label for="inputSexo">Sexo</label>
-                    <select class="form-control" id="inputSexo" required>
+                    <select class="form-control" id="inputSexo" >
                       <option selected>Escolha...</option>
                       <option value="M">Masculino</option>
                       <option value="F">Feminino</option>
@@ -446,7 +380,7 @@
                   </div>
                   <div class="form-group col-md-4">
                     <label for="inputCivil">Estado Civil</label>
-                    <select id="inputCivil" class="form-control" required>
+                    <select id="inputCivil" class="form-control" >
                       <option selected>Escolha...</option>
                       <option value="Solteiro">Solteiro</option>
                       <option value="Casado">Casado</option>
@@ -465,7 +399,7 @@
                   <div class="form-group col-md-6">
                     <label for="inputCel">Celular</label>
                     <input type="text" class="form-control" id="inputCel" placeholder="(xx) xxxxx-xxxx"
-                      autocomplete="off" required>
+                      autocomplete="off" >
                   </div>
                 </div>
 
@@ -498,11 +432,11 @@
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="inputCidade">Cidade</label>
-                    <input type="text" class="form-control" id="inputCidade" required>
+                    <input type="text" class="form-control" id="inputCidade" >
                   </div>
                   <div class="form-group col-md-4">
                     <label for="inputEstado">Estado</label>
-                    <select id="inputEstado" class="form-control" required>
+                    <select id="inputEstado" class="form-control" >
                       <option selected>Escolha...</option>
                       <option value="Acre">AC</option>
                       <option value="Alagoas">AL</option>
@@ -552,7 +486,7 @@
                 <div class="form-group">
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" required> Confirme
+                      <input class="form-check-input" type="checkbox" > Confirme
                     </label>
                   </div>
                 </div>
@@ -560,7 +494,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-primary" style="color: #fff;" id="btn-form">Salvar</button>
+              <button type="submit" class="btn btn-primary" style="color: #fff;" data-dismiss="modal" id="btn-form">Salvar</button>
 
             </div>
           </div>
@@ -604,6 +538,7 @@
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/data/firebase.js"></script>
+  <script src="assets/data/tablePacientes.js"></script>
 
 
   <script>
