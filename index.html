@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Login &mdash; Stisla</title>
+  <title>Login &mdash; Fisio</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
@@ -23,6 +23,12 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-94034622-3');
+</script>
+<script>
+  function redirecionar() {
+     window.location.replace("home.html");
+    console.log("Clicado")
+  }
 </script>
 <!-- /END GA --></head>
 
@@ -45,13 +51,13 @@
                     <label for="email">Email</label>
                     <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
                     <div class="invalid-feedback">
-                      Please fill in your email
+                      Por favor, preencha seu e-mail
                     </div>
                   </div>
 
                   <div class="form-group">
                     <div class="d-block">
-                    	<label for="password" class="control-label">Password</label>
+                    	<label for="password" class="control-label">Senha</label>
                       <div class="float-right">
                         <a href="auth-forgot-password.html" class="text-small">
                           Esqueci a senha?
@@ -60,7 +66,7 @@
                     </div>
                     <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
                     <div class="invalid-feedback">
-                      please fill in your password
+                      Por favor, preencha sua senha
                     </div>
                   </div>
 
@@ -72,7 +78,7 @@
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" tabindex="4" onclick="redirecionar()">
                       Entrar
                     </button>
                   </div>
@@ -106,6 +112,8 @@
       </div>
     </section>
   </div>
+
+  
 
   <!-- General JS Scripts -->
   <script src="assets/modules/jquery.min.js"></script>
