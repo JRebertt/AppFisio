@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "62d4d704-a186-4329-a979-f8aac9883e11",
+		"name": "AppFisio API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Logar com usuario e senha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"nathila\",\r\n    \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/login",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "Criar Paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Nome do Paciente\",\r\n    \"cpf\": \"111.222.333.99\",\r\n    \"idade\" : 21,\r\n    \"naturalidade\": \"Brasileiro\",\r\n    \"sexo\": \"Masculino\",\r\n    \"estadoCivil\": \"Solteiro\",\r\n    \"telefoneResidencial\": \"(91) 3721-9050\",\r\n    \"celular\": \"(91) 99234-0000\",\r\n    \"ocupacao\": \"Profissão do Paciente\",\r\n    \"escolaridade\": \"Ensino superior completo\",\r\n    \"religiao\": \"Cristao\",\r\n    \"cidade\": \"Castanhal\",\r\n    \"estado\": \"PA\",\r\n    \"cep\": \"68745-000\",\r\n    \"endereco\": \"Avenida Barao do Rio Branco\",\r\n    \"bairro\": \"Centro\",\r\n    \"dataNascimento\": \"02/02/2022\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/pacientes",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Nome do Paciente Atualizado\",\r\n    \"cpf\": \"111.222.333.99\",\r\n    \"idade\" : 21,\r\n    \"naturalidade\": \"Brasileiro\",\r\n    \"sexo\": \"Masculino\",\r\n    \"estadoCivil\": \"Solteiro\",\r\n    \"telefoneResidencial\": \"(91) 3721-9050\",\r\n    \"celular\": \"(91) 99234-0000\",\r\n    \"ocupacao\": \"Profissão do Paciente\",\r\n    \"escolaridade\": \"Ensino superior completo\",\r\n    \"religiao\": \"Cristao\",\r\n    \"cidade\": \"Castanhal\",\r\n    \"estado\": \"PA\",\r\n    \"cep\": \"68745-000\",\r\n    \"endereco\": \"Avenida Barao do Rio Branco\",\r\n    \"bairro\": \"Centro\",\r\n    \"dataNascimento\": \"02/02/2022\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/pacientes",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Pacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/pacientes",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Pacientes por Tipo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/pacientes?tipo=inativos",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"pacientes"
+							],
+							"query": [
+								{
+									"key": "tipo",
+									"value": "inativos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Paciente por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/pacientes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desativar Paciente por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/pacientes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Avaliação",
+			"item": [
+				{
+					"name": "Criar Avaliação",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"queixaPrincipal\": \"Dor no ombro 4\",\r\n    \"historiaDoencaAtual\": \"historia doenca atual\",\r\n    \"historiaDoencaProgressiva\": \"historia doenca progressiva\",\r\n    \"historicoFamiliar\": \"historico familiar\",\r\n    \"doencasCronicas\": \"doencas cronicas\",\r\n    \"medicamentos\": \"medicamentos\",\r\n    \"procedimentosCirurgicos\": \"procedimentos cirurgicos\",\r\n    \"examesComplementares\": \"exames complementares\",\r\n    \"atividadesDiariaLazer\": \"atividades diarias\",\r\n    \"tabagismo\": \"tabagismo\",\r\n    \"consumoAlcoolDrogas\": \"consumoAlcoolDrogas\",\r\n    \"praticasAtividadesFisicas\": \"praticasAtividadesFisicas\",\r\n    \"alimentacao\": \"alimentacao\",\r\n    \"localizacaoDor\": \"localizacaoDor\",\r\n    \"intensidadeDor\": 10,\r\n    \"caracteristicasAlgicas\": \"caracteristicasAlgicas\",\r\n    \"manifestacoesSistemicas\": \"manifestacoesSistemicas\",\r\n    \"anotacoesComplementares\": \"anotacoesComplementares\",\r\n\r\n    \"sentadaParaEmPe\": 5,\r\n    \"emPeSemApoio\": 4,\r\n    \"sentadoSemApoioCostasPesApoiados\": 3,\r\n    \"emPeParaSentado\": 2,\r\n    \"transferenciaCadeirasApoio\": 2,\r\n    \"emPeSemApoioOlhosFechados\": 3,\r\n    \"emPeSemApoioPesJuntos\":  4,\r\n    \"alcancarFrenteBracoEstendidoEmPe\":  2,\r\n    \"pegarObjetoChaoEmPe\":  3,\r\n    \"virarOlharPraTrasCimaOmbrosEmPe\":  5,\r\n    \"girar360\":  4,\r\n    \"posicionarPesDegrauSemApoio\":  2,\r\n    \"emPeSemApoioComPeFrente\":  2,\r\n    \"emPeSobreUmaPerna\":  2,\r\n\r\n    \"pa\":  \"\",\r\n    \"fc\":  \"\",\r\n    \"spo2\":  \"\",\r\n    \"fr\":  \"\",\r\n    \"t\":  \"\",\r\n    \"peso\":  70,\r\n    \"altura\":  170,\r\n    \"medidaCintura\":  70,\r\n    \"medidaQuadril\":  70,\r\n    \"inspecaoEspecifica\":  \"\",\r\n    \"palpacao\":  \"\",\r\n    \"testeForcaMuscular\":  \"\",\r\n    \"testeSensibilidade\":  \"\",\r\n    \"avaliacaoPostural\":  \"\",\r\n    \"exameMarcha\":  \"\",\r\n    \"anotacoesComplementaresExameFisico\":  \"\",\r\n\r\n    \"hipotese\":  \"\",\r\n\r\n    \"testeColunaVertebral\":  \"\",\r\n    \"testeMembrosSuperiores\":  \"\",\r\n    \"testeMembrosInferiores\":  \"\",\r\n\r\n    \"decisao\":  \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/avaliacoes/pacientes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"avaliacoes",
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Todas Avaliações",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/avaliacoes",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"avaliacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Avaliação por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/avaliacoes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"avaliacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Avaliação por ID do Paciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/avaliacoes/pacientes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"avaliacoes",
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Avaliação por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/avaliacoes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"avaliacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evolução",
+			"item": [
+				{
+					"name": "Criar Evolução de um Paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"texto\": \"Descrição da evolução do paciente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/evolucoes/pacientes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"evolucoes",
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Todas Evoluções",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/evolucoes",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"evolucoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Evolução por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/evolucoes/5",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"evolucoes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Evolução por ID do Paciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/evolucoes/pacientes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"evolucoes",
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Evolução por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/evolucoes/5",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"evolucoes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Historico",
+			"item": [
+				{
+					"name": "Consultar Historico de Evoluções e Avaliações pelo ID do Paciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appfisio-api.herokuapp.com/api/historico/pacientes/1",
+							"protocol": "https",
+							"host": [
+								"appfisio-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"historico",
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
