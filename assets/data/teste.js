@@ -1,9 +1,7 @@
-
-const url = 'https://appfisio-api.herokuapp.com/api/pacientes/';
+  const url = "https://appfisio-api.herokuapp.com/api/pacientes/";
 
 btnForm.addEventListener("click", (e) => {
   e.preventDefault();
-
 
   let nome = document.querySelector("#inputName").value;
   let cpf = document.querySelector("#inputCPF").value;
@@ -23,44 +21,36 @@ btnForm.addEventListener("click", (e) => {
   let end = document.querySelector("#inputAddress").value;
   let bairro = document.querySelector("#inputBairro").value;
 
-
   axios.post(url, {
-    nome: nome,
-    cpf: cpf,
-    idade: idade,
-    naturalidade: natu,
-    sexo: sexo,
-    estadoCivil: civil,
-    telefoneResidencial: tel,
-    celular: cel,
-    ocupacao: ocupa,
-    escolaridade: escol,
-    religiao: relig,
-    cidade: cidade,
-    estado: estado,
-    cep: cep,
-    endereco: end,
-    bairro: bairro,
-    dataNascimento: data,
-  })
-
+      nome: nome,
+      cpf: cpf,
+      idade: idade,
+      naturalidade: natu,
+      sexo: sexo,
+      estadoCivil: civil,
+      telefoneResidencial: tel,
+      celular: cel,
+      ocupacao: ocupa,
+      escolaridade: escol,
+      religiao: relig,
+      cidade: cidade,
+      estado: estado,
+      cep: cep,
+      endereco: end,
+      bairro: bairro,
+      dataNascimento: data,
+    })
 
     .then(() => {
-      console.log(nome)
+      console.log(nome);
+      form.reset();
     })
-    .catch(err => console.log(err))
-
-  form.reset();
-})
-
-
-
-
+    .catch((err) => console.log(err));
+});
 
 function getUser() {
   axios.get(`${url}?tipo=ativos`)
-    .then(res => {
-
+    .then((res) => {
       const table = document.getElementById("lisTable");
       table.innerHTML = `<tr>
               <th>Id</th>
@@ -68,15 +58,13 @@ function getUser() {
               <th>Cpf</th>                           
               <th>Status</th>                          
               <th>Interação</th>                        
-              </tr>`;
+        </tr>`;
 
-      res?.data.map((val, index) => {
+      res.data.map((val) => {
         let id = val.id;
 
-        console.log(val)
-
         table.innerHTML += `<tr>        
-            <td user-id="${val.id}">${index + 1}</td>        
+            <td user-id="${val.id}">${val.id}</td>        
             <td>${val.nome}</td>        
             <td>${val.cpf}</td>              
             <td><div class="badge badge-success">Ativo</div></td>             
@@ -92,21 +80,18 @@ function getUser() {
             </td>   
                  
         </tr>`;
-      })
-      console.log(res.data)
+      });
+      console.log(res.data);
     })
-    .catch(err => console.log(err))
+    .catch((err) => console.log(err));
 }
 
-getUser()
+getUser();
 
+function deleteUser() {
+  axios.delete("https://appfisio-api.herokuapp.com/api/pacientes/" + 1)
 
-async function deleteUser(id) {
-  const res = await axios.delete('https://appfisio-api.herokuapp.com/api/pacientes/' + 1)
-  console.log(res)
+    .then((res) => console.log(res.data.id));
 }
 
-
-
-
-deleteUser()
+deleteUser();

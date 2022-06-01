@@ -27,31 +27,31 @@ btnForm.addEventListener("click", (e) => {
 
   // Enviando dados para o banco
   db.collection(paciente)
-      .add({
-          Nome: nome,
-          CPF: cpf,
-          Nascimento: data,
-          Idade: idade,
-          Naturalidade: natu,
-          Sexo: sexo,
-          Estado_Civil: civil,
-          Telefone: tel,
-          Celular: cel,
-          Ocupação: ocupa,
-          Escolaridade: escol,
-          Religião: relig,
-          Cidade: cidade,
-          Estado: estado,
-          Cep: cep,
-          Endereço: end,
-          Bairro: bairro,
-      })
-      .then((docRef) => {
-          console.log("Cadastrado Com Sucesso", docRef.id);
-      })
-      .catch((err) => {
-          console.log("Ops,Não foi possível finalizar o cadastro", err);
-      });
+    .add({
+      Nome: nome,
+      CPF: cpf,
+      Nascimento: data,
+      Idade: idade,
+      Naturalidade: natu,
+      Sexo: sexo,
+      Estado_Civil: civil,
+      Telefone: tel,
+      Celular: cel,
+      Ocupação: ocupa,
+      Escolaridade: escol,
+      Religião: relig,
+      Cidade: cidade,
+      Estado: estado,
+      Cep: cep,
+      Endereço: end,
+      Bairro: bairro,
+    })
+    .then((docRef) => {
+      console.log("Cadastrado Com Sucesso", docRef.id);
+    })
+    .catch((err) => {
+      console.log("Ops,Não foi possível finalizar o cadastro", err);
+    });
 
   form.reset();
 });
@@ -69,13 +69,13 @@ db.collection("pacientes").onSnapshot((data) => {
               <th>Interação</th>                        
               </tr>`;
   data.docs.forEach((val, index) => {
-      // Add conteudo de dados no table
-      // Pego o id
-      let id = val.id;
-      //  no lugar de pegar auqele array e adicionar um addEventListenner, eu altero o typo do button
-      // para type="button" porque por padrão ele vem com type="submit"
-      // adiciono um onclick passando o id atual pegado anteriormente no for
-      table.innerHTML += `<tr>        
+    // Add conteudo de dados no table
+    // Pego o id
+    let id = val.id;
+    //  no lugar de pegar auqele array e adicionar um addEventListenner, eu altero o typo do button
+    // para type="button" porque por padrão ele vem com type="submit"
+    // adiciono um onclick passando o id atual pegado anteriormente no for
+    table.innerHTML += `<tr>        
             <td user-id="${val.id}">${index + 1}</td>        
             <td>${val.data().Nome}</td>        
             <td>${val.data().CPF}</td>              
@@ -93,16 +93,16 @@ db.collection("pacientes").onSnapshot((data) => {
                  
         </tr>`;
   });
-});
+}); -
 
-function apagar_do_banco(id) {
-  // pego o id passado no onclick e apago o item necessário
-  service
+  function apagar_do_banco(id) {
+    // pego o id passado no onclick e apago o item necessário
+    service
       .firestore()
       .collection("pacientes")
       .doc(id)
       .delete()
       .then(() => {
-          console.log("Apagado");
+        console.log("Apagado");
       });
-}
+  }
