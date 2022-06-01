@@ -1,0 +1,20 @@
+{
+  "name": "novodash",
+  "version": "1.0.0",
+  "description": "![AppFisio Preview](https://i.ibb.co/pvS4F4H/appfisio.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRebertt/AppFisio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRebertt/AppFisio/issues"
+  },
+  "homepage": "https://github.com/JRebertt/AppFisio#readme"
+}

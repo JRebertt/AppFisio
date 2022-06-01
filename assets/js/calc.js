@@ -1,24 +1,32 @@
 
 
+//mask form
+$(document).ready(function () {
 
-// function calcIMC () {
+  $('#inputPeso').mask("000");
 
- 
+  $('#inputAlt').mask("0.00");
+
+});
 
 
-// }
 
+function calc() {
+  let weight = document.getElementById('inputPeso').value.replace(/,/g, '.');
 
-// let peso = document.getElementById('inputPeso').value;
-// let alt = document.getElementById('inputAlt'.value);
-// let MC = document.getElementById('inputMC').value;
-// let MQ = document.getElementById('inputMQ').value;
+  let height = document.getElementById('inputAlt').value.replace(/,/g, '-', '.');
 
-// peso = 120;
-// alt = 1 80;
+  if (weight == '' || height == '') {
+    alert('Porfavor preencha os dados')
+  }
 
-// console.log(peso, alt, MC, MQ);
+  results = (weight / (height * height))
 
-// resultIMC = peso / (alt * alt);
+  results = results.toFixed(2).replace(/\./g, ',');
 
-// console.log(resultIMC)
+  document.getElementById('calcIMC').innerHTML = results
+
+  console.log(results);
+
+}
+

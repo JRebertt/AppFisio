@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="assets/css/components.css">
   <!-- Start GA -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
-  <script async src="/assets/js/calc.js"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -332,7 +332,8 @@
                 </div>
               </div>
             </div>
-          </div>  <!--Pacientes Select-->
+          </div>
+          <!--Pacientes Select-->
 
           <div class="section-form">
 
@@ -396,8 +397,8 @@
                           <input type="text" class="form-control" id="inputName" required>
 
                           <label for="inputName">Exames Complementares</label>
-                            <input type="text" class="form-control" id="inputName" required>
-                            
+                          <input type="text" class="form-control" id="inputName" required>
+
 
                           <label for="inputName">Atividades de Vida Diária e Lazer</label>
                           <input type="text" class="form-control" id="inputName" required>
@@ -427,17 +428,20 @@
 
                           <label for="inputName">Manifestações Sistêmicas</label>
                           <input type="text" class="form-control" id="inputName" required>
-                          
+
                           <label for="inputName">Anotações Complementares</label>
                           <input type="text" class="form-control" id="inputName" required>
-                          
+
                           <div class="form-group col-md-4" id="fileDrop"">
                             <label>File</label>
-                            <input type="file" class="form-control">
+                            <input type=" file" class="form-control">
                           </div>
-                        </div>  <!--Final form-group-->
-                      </form> <!--Final forms-->
-                    </div>  <!--Final Tab-Home-->
+                        </div>
+                        <!--Final form-group-->
+                      </form>
+                      <!--Final forms-->
+                    </div>
+                    <!--Final Tab-Home-->
                     <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="profile-tab2">
                       <form autocomplete="off" action="" data-ls-module="form" id="forms">
                         <div class="form-row">
@@ -468,80 +472,86 @@
                           <!--Final form-group-->
                         </div>
                         <!--Final form-row-->
-                        <div class="form-row">
-                          <div class="form-group col-2">
-                            <label for="inputPeso">Peso</label>
-                            <input type="number" class="form-control" id="inputPeso" required>
+                        <form>
+                          <div class="form-row">
+                            <div class="form-group col-2">
+                              <label for="inputPeso">Peso</label>
+                              <input type="number" class="form-control" id="inputPeso" required>
+                            </div>
+                            <!--Final form-group-->
+                            <div class="form-group col-2">
+                              <label for="inputAlt">Altura</label>
+                              <input type="number" class="form-control" id="inputAlt" required>
+                            </div>
+                            <!--Final form-group-->
+                            <div class="form-group col-md-3">
+                              <label for="inputMC">Medida do Cintura</label>
+                              <input type="number" class="form-control" id="inputMC" required>
+                            </div>
+                            <!--Final form-group-->
+                            <div class="form-group col-3">
+                              <label for="inputMQ">Medida do Quadril</label>
+                              <input type="number" class="form-control" id="inputMQ" required>
+                            </div>
+                            <!--Final form-group-->
                           </div>
-                          <!--Final form-group-->
-                          <div class="form-group col-2">
-                            <label for="inputAlt">Altura</label>
-                            <input type="number" class="form-control" id="inputAlt" required>
-                          </div>
-                          <!--Final form-group-->
-                          <div class="form-group col-md-3">
-                            <label for="inputMC">Medida do Cintura</label>
-                            <input type="number" class="form-control" id="inputMC" required>
-                          </div>
-                          <!--Final form-group-->
-                          <div class="form-group col-3">
-                            <label for="inputMQ">Medida do Quadril</label>
-                            <input type="number" class="form-control" id="inputMQ" required>
-                          </div>
-                          <!--Final form-group-->
-                        </div>
+                          <button type="submit" class="btn btn-primary" onclick="calc()">Calc</button>
+                        </form>
                         <!--Final form-row-->
                         <div class="score-tab2 ">
 
                           <!--Css Area-->
-                        <style>
-                          .card-header{
-                            text-align: center;
-                          }
-                          #imc1 {
-                            font-size: 1rem;
-                          }
+                          <style>
+                            .card-header {
+                              text-align: center;
+                            }
 
-                          #imc2 {
-                            font-size: 2rem;
-                          }
-                        </style>
-                        <!--Css Area-->
+                            #imc1 {
+                              font-size: 1rem;
+                            }
 
-                        <div class="row">
-                          <div class="col-12 col-md-6 col-lg-3">
-                            <div class="card card-primary">
-                              <div class="card-header">
-                                <h4>IMC</h4>
-                              </div>
-                              <div class="card-body">
-                                <h3>90.7</h3>
+                            #imc2 {
+                              font-size: 2rem;
+                            }
+                          </style>
+                          <!--Css Area-->
+
+                          <div class="row">
+                            <div class="col-12 col-md-6 col-lg-3">
+                              <div class="card card-primary">
+                                <div class="card-header">
+                                  <h4>IMC</h4>
+                                </div>
+                                <div class="card-body">
+                                  <h3 id="calcIMC"></h3>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="col-12 col-md-6 col-lg-3">
-                            <div class="card card-secondary">
-                              <div class="card-header">
-                                <h4>RCE</h4>
-                              </div>
-                              <div class="card-body">
-                                <h3>80.3</h3>
+                            <div class="col-12 col-md-6 col-lg-3">
+                              <div class="card card-secondary">
+                                <div class="card-header">
+                                  <h4>RCE</h4>
+                                </div>
+                                <div class="card-body">
+                                  <h3>80.3</h3>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="col-12 col-md-6 col-lg-3">
-                            <div class="card card-danger">
-                              <div class="card-header">
-                                <h4>RCQ</h4>
-                              </div>
-                              <div class="card-body">
-                                <h3>100.00</h3>
+                            <div class="col-12 col-md-6 col-lg-3">
+                              <div class="card card-danger">
+                                <div class="card-header">
+                                  <h4>RCQ</h4>
+                                </div>
+                                <div class="card-body">
+                                  <h3>100.00</h3>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>  <!--Final score-tab2-->
-                      </form> <!--Final form-tab2-->
+                        <!--Final score-tab2-->
+                      </form>
+                      <!--Final form-tab2-->
                       <div class="form-group">
                         <label for="inputName">Inspeção Específica</label>
                         <input type="text" class="form-control" id="inputName" required>
@@ -569,8 +579,10 @@
                           <input type="file" class="form-control">
                         </div>
 
-                      </div>  <!--Final form-group-->
-                    </div>  <!--Final Tab2-->
+                      </div>
+                      <!--Final form-group-->
+                    </div>
+                    <!--Final Tab2-->
                     <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="profile-tab3">
                       <form autocomplete="off" action="" data-ls-module="form" id="forms">
                         <div class="form-group">
@@ -588,46 +600,51 @@
                       </form>
                     </div>
                     <!--Final Tab3-->
+
                     <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="profile-tab4">
-                    <form autocomplete=" off" data-ls-module="form" id="forms" style="padding-top: 2rem;">
-                      <h2>Escala de Equilíbrio de Berg</h2>
-                      <div class="form-group">
-                        <label class="d-block">
-                          <h5> 1. Posição sentada para posição em pé. <br>
-                            Instruções: Por favor, levante-se. Tente não usar suas mãos para se apoiar.</h5>
-                        </label>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="level4" checked>
-                          <label class="form-check-label" for="exampleRadios1">
-                            4 capaz de levantar-se sem utilizar as mãos e estabilizar-se independentemente.
+                      <form autocomplete=" off" data-ls-module="form" id="forms" style="padding-top: 2rem;">
+                        <h2>Escala de Equilíbrio de Berg</h2>
+                        <div class="form-group">
+                          <label class="d-block">
+                            <h5> 1. Posição sentada para posição em pé. <br>
+                              Instruções: Por favor, levante-se. Tente não usar suas mãos para se apoiar.</h5>
                           </label>
-                        </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="level4" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              4 capaz de levantar-se sem utilizar as mãos e estabilizar-se independentemente.
+                            </label>
+                          </div>
 
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
-                          <label class="form-check-label" for="exampleRadios2">
-                            3 capaz de levantar-se independentemente e estabilizar-se independentemente.
-                          </label>
-                        </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              3 capaz de levantar-se independentemente e estabilizar-se independentemente.
+                            </label>
+                          </div>
 
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
-                          <label class="form-check-label" for="exampleRadios2">
-                            2 capaz de levantar-se utilizando as mãos após diversas tentativas. </label>
-                        </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              2 capaz de levantar-se utilizando as mãos após diversas tentativas. </label>
+                          </div>
 
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
-                          <label class="form-check-label" for="exampleRadios2">
-                            1 necessita de ajuda mínima para levantar-se ou estabilizar-se. </label>
-                        </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              1 necessita de ajuda mínima para levantar-se ou estabilizar-se. </label>
+                          </div>
 
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
-                          <label class="form-check-label" for="exampleRadios2">
-                            0 necessita de ajuda moderada ou máxima para levantar-se. </label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              0 necessita de ajuda moderada ou máxima para levantar-se. </label>
+                          </div>
                         </div>
-                      </div>
                       </form>
                       <!--Final form 1-->
 
@@ -1301,14 +1318,21 @@
                           <input type="text" class="form-control" id="inputName" required>
                         </div>
                       </form>
-                    </div>  <!--Final Tab6-->
-                  </div>  <!--Final TabContent-->
+                    </div>
+                    <!--Final Tab6-->
+                  </div>
+                  <!--Final TabContent-->
                   <div class="section-footer">
-                    <button type="submit" class="btn btn-primary float-right" style="color: #fff;" id="btn-form">Salvar</button>
-                  </div>  <!--Final btn-->
-                </div>  <!--Final col-12-->
-              </div>  <!--Final row-->
-            </div>  <!--Final card-body-->
+                    <button type="submit" class="btn btn-primary float-right" style="color: #fff;"
+                      id="btn-form">Salvar</button>
+                  </div>
+                  <!--Final btn-->
+                </div>
+                <!--Final col-12-->
+              </div>
+              <!--Final row-->
+            </div>
+            <!--Final card-body-->
 
 
           </div>
@@ -1325,6 +1349,7 @@
 
   <!-- General JS Scripts -->
   <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/jquery-mask/jquery.min.js"></script>
   <script src="assets/modules/popper.js"></script>
   <script src="assets/modules/tooltip.js"></script>
   <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
@@ -1350,6 +1375,8 @@
   <script src="assets/js/custom.js"></script>
   <script src="assets/data/firebase.js"></script>
   <script src="assets/data/select.js"></script>
+  <script src="/assets/js/calc.js"></script>
+
 
 </body>
 
