@@ -12,6 +12,9 @@ var firebaseConfig = {
 // Initialize Firebase
 var service = firebase.initializeApp(firebaseConfig);
 
+//URL API axios
+const url = "https://appfisio-api.herokuapp.com/api/pacientes";
+
 // Declarando Variaveis
 const db = firebase.firestore();
 const form = document.getElementById("forms");

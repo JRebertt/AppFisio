@@ -1,4 +1,3 @@
-  const url = "https://appfisio-api.herokuapp.com/api/pacientes/";
 
 btnForm.addEventListener("click", (e) => {
   e.preventDefault();
@@ -22,24 +21,24 @@ btnForm.addEventListener("click", (e) => {
   let bairro = document.querySelector("#inputBairro").value;
 
   axios.post(url, {
-      nome: nome,
-      cpf: cpf,
-      idade: idade,
-      naturalidade: natu,
-      sexo: sexo,
-      estadoCivil: civil,
-      telefoneResidencial: tel,
-      celular: cel,
-      ocupacao: ocupa,
-      escolaridade: escol,
-      religiao: relig,
-      cidade: cidade,
-      estado: estado,
-      cep: cep,
-      endereco: end,
-      bairro: bairro,
-      dataNascimento: data,
-    })
+    nome: nome,
+    cpf: cpf,
+    idade: idade,
+    naturalidade: natu,
+    sexo: sexo,
+    estadoCivil: civil,
+    telefoneResidencial: tel,
+    celular: cel,
+    ocupacao: ocupa,
+    escolaridade: escol,
+    religiao: relig,
+    cidade: cidade,
+    estado: estado,
+    cep: cep,
+    endereco: end,
+    bairro: bairro,
+    dataNascimento: data,
+  })
 
     .then(() => {
       console.log(nome);
@@ -61,6 +60,7 @@ function getUser() {
         </tr>`;
 
       res.data.map((val) => {
+        console.log(val)
         let id = val.id;
 
         table.innerHTML += `<tr>        
