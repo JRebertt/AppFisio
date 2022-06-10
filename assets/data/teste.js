@@ -42,6 +42,7 @@ btnForm.addEventListener("click", (e) => {
 
     .then(() => {
       console.log(nome);
+      document.location.reload(true);
       form.reset();
     })
     .catch((err) => console.log(err));
@@ -51,7 +52,8 @@ function getUser() {
   axios.get(`${url}?tipo=ativos`)
     .then((res) => {
       const table = document.getElementById("lisTable");
-      table.innerHTML = `<tr>
+      table.innerHTML = 
+      `<tr>
               <th>Id</th>
               <th>Nome</th>                          
               <th>Cpf</th>                           
@@ -69,13 +71,18 @@ function getUser() {
             <td>${val.cpf}</td>              
             <td><div class="badge badge-success">Ativo</div></td>             
             <td>
-            <div class="btn-group dropup">
-          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais</button>
+            <div class="btn-group dropdown">
+          <button 
+            class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais
+          </button>
           <div class="dropdown-menu"><a class="dropdown-item has-icon" href="#"><i class="far fa-eye"></i> Detalhes</a>
-          <a class="dropdown-item has-icon" href="historico.html"><i class="far fa-file"></i> Histórico</a>
+              <a class="dropdown-item has-icon" href="historico.html"><i class="far fa-file"></i> Histórico</a>
           </div>
             </div>
-              <button class="btn btn-danger btn-del" type="button" onclick=deleteUser("${id}")>Apagar</button>
+              <button 
+                class="btn btn-danger btn-del" type="button" onclick=deleteUser("${id}")>
+                Apagar
+              </button>
 
             </td>   
                  
@@ -88,10 +95,13 @@ function getUser() {
 
 getUser();
 
-function deleteUser() {
-  axios.delete("https://appfisio-api.herokuapp.com/api/pacientes/" + 1)
+function deleteUser(id) {
+  axios.delete("https://appfisio-api.herokuapp.com/api/pacientes/" + id)
 
-    .then((res) => console.log(res.data.id));
+    .then((res) => {
+      console.log(res);
+      document.location.reload(true);
+    })
+    .catch((err) => {err})
+
 }
-
-deleteUser();
