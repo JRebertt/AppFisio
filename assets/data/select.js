@@ -1,3 +1,4 @@
+
 function showUsers() {
   axios.get(`${url}?tipo=ativos`)
     .then((res) => {
@@ -9,20 +10,20 @@ function showUsers() {
         return `<option value="${id}">${val.nome}</option>`;
 
       })
-      
-      
-      const contentPacientes = document.getElementById("contentPacientes"); 
+
+
+      const contentPacientes = document.getElementById("contentPacientes");
+
       contentPacientes.innerHTML =
         ` 
-          <select 
-              class="custom-select">
+          <select class="custom-select" id="elementId">
                 <option selected>Escolha...</option>
                 ${option}
               
           </select>
 
           <div class="input-group-append">
-          <button class="btn btn-primary" type="submit">
+          <button class="btn btn-primary" type="button" onclick=showUserHistoric()>
             Continuar
           </button>
         </div>
@@ -30,6 +31,7 @@ function showUsers() {
             
       `
 
+      
     })
     .catch((err) => {
       console.log(err)
@@ -38,4 +40,12 @@ function showUsers() {
 }
 
 showUsers()
+
+function showUserHistoric() {
+  let select = document.getElementById('elementId');
+
+  let opValue = select.options[select.selectedIndex].value
+
+console.log(opValue)
+}
 

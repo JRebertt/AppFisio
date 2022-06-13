@@ -52,8 +52,8 @@ function getUser() {
   axios.get(`${url}?tipo=ativos`)
     .then((res) => {
       const table = document.getElementById("lisTable");
-      table.innerHTML = 
-      `<tr>
+      table.innerHTML =
+        `<tr>
               <th>Id</th>
               <th>Nome</th>                          
               <th>Cpf</th>                           
@@ -102,6 +102,6 @@ function deleteUser(id) {
       console.log(res);
       document.location.reload(true);
     })
-    .catch((err) => {err})
+    .catch((err) => { err })
 
 }
