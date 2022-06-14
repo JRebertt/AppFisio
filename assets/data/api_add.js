@@ -41,9 +41,20 @@ btnForm.addEventListener("click", (e) => {
   })
 
     .then(() => {
-      console.log(nome);
-      document.location.reload(true);
-      form.reset();
+      
+      iziToast.success({
+        title: 'Sucesso',
+        message: 'Paciente Cadastrado com Sucesso',
+        position: 'topRight',
+        timeout: '1500',
+      });
+      console.log(iziToast)
+      setTimeout(() => {
+        document.location.reload(true);
+        form.reset();
+      }, 1600)
+      
+
     })
     .catch((err) => console.log(err));
 });
