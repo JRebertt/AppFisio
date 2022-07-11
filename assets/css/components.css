@@ -765,10 +765,8 @@ tr:first-child > td > .fc-day-grid-event {
   width: 100%;
   margin-bottom: 10px;
 }
-.profile-widget .profile-widget-items {
-  display: flex;
-  position: relative;
-}
+
+
 .profile-widget .profile-widget-items:after {
   content: " ";
   position: absolute;

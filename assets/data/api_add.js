@@ -148,21 +148,21 @@ function editUser(id) {
             <form autocomplete="off" action="post" data-ls-module="form" id="forms" method="POST">
             <div class="form-group">
               <label for="inputName">Nome</label>
-              <input type="text" class="form-control" id="inputName" placeholder="${val.nome}">
+              <input type="text" class="form-control" id="inputName" placeholder="${val.nome}" readonly>
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="inputCPF">CPF</label>
-                <input type="text" class="form-control ls-mask-cpf" id="inputCPF" placeholder="${val.cpf}">
+                <input type="text" class="form-control ls-mask-cpf" id="inputCPF" placeholder="${val.cpf}" readonly>
               </div>
               <div class="form-group col-md-4">
                 <label for="inputData">Data de Nascimento</label>
-                <input type="text" class="form-control ls-mask-date" id="inputData" placeholder="${val.dataNascimento}">
+                <input type="text" class="form-control ls-mask-date" id="inputData" placeholder="${val.dataNascimento}" readonly>
               </div>
               <div class="form-group col-md-2">
                 <label for="inputIdade">Idade</label>
-                <input type="text" class="form-control" id="inputIdade" placeholder="${val.idade}">
+                <input type="text" class="form-control" id="inputIdade" placeholder="${val.idade}" readonly>
               </div>
 
             </div>
@@ -170,12 +170,12 @@ function editUser(id) {
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="inputNatural">Naturalidade</label>
-                <input type="text" class="form-control" id="inputNatural" placeholder="${val.naturalidade}">
+                <input type="text" class="form-control" id="inputNatural" placeholder="${val.naturalidade}" readonly>
               </div>
 
               <div class="form-group col-md-3">
                 <label for="inputSexo">Sexo</label>
-                <select class="form-control" id="inputSexo">
+                <select class="form-control" id="inputSexo" readonly>
                   <option selected>${val.sexo}</option>
                   <option value="Masculino">Masculino</option>
                   <option value="Feminino">Feminino</option>
@@ -183,7 +183,7 @@ function editUser(id) {
               </div>
               <div class="form-group col-md-4">
                 <label for="inputCivil">Estado Civil</label>
-                <select id="inputCivil" class="form-control">
+                <select id="inputCivil" class="form-control" readonly>
                   <option selected>${val.estadoCivil}</option>
                   <option value="Solteiro">Solteiro</option>
                   <option value="Casado">Casado</option>
@@ -197,23 +197,22 @@ function editUser(id) {
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputTel">Telefone Residencial</label>
-                <input type="text" class="form-control" id="inputTel" placeholder="${val.telefoneResidencial}" autocomplete="off">
+                <input type="text" class="form-control" id="inputTel" placeholder="${val.telefoneResidencial}" readonly>
               </div>
               <div class="form-group col-md-6">
                 <label for="inputCel">Celular</label>
-                <input type="text" class="form-control" id="inputCel" placeholder="${val.celular}"
-                  autocomplete="off">
+                <input type="text" class="form-control" id="inputCel" placeholder="${val.celular}" readonly>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputProf">Ocupação</label>
-                <input type="text" class="form-control" id="inputProf" placeholder="${val.ocupacao}">
+                <input type="text" class="form-control" id="inputProf" placeholder="${val.ocupacao}" readonly>
               </div>
               <div class="form-group col-md-6">
                 <label for="inputEscol">Escolaridade</label>
-                <select id="inputEscol" class="form-control">
+                <select id="inputEscol" class="form-control" readonly>
                   <option selected>${val.escolaridade}</option>
                   <option value="SemEscolaridade">Sem escolaridade</option>
                   <option value="Alfabetização">Alfabetização</option>
@@ -229,17 +228,17 @@ function editUser(id) {
 
             <div class="form-group col-md-14">
               <label for="inputRelig">Religião</label>
-              <input type="text" class="form-control" id="inputRelig" placeholder="${val.religiao}">
+              <input type="text" class="form-control" id="inputRelig" placeholder="${val.religiao}" readonly>
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="inputCidade">Cidade</label>
-                <input type="text" class="form-control" id="inputCidade" placeholder="${val.cidade}">
+                <input type="text" class="form-control" id="inputCidade" placeholder="${val.cidade}" readonly >
               </div>
               <div class="form-group col-md-4">
                 <label for="inputEstado">Estado</label>
-                <select id="inputEstado" class="form-control">
+                <select id="inputEstado" class="form-control" readonly>
                   <option selected>${val.estado}</option>
                   <option value="Acre">AC</option>
                   <option value="Alagoas">AL</option>
@@ -271,18 +270,18 @@ function editUser(id) {
               </div>
               <div class="form-group col-md-4">
                 <label for="inputZip">Cep</label>
-                <input type="text" class="form-control" id="inputZip" placeholder="${val.cep}">
+                <input type="text" class="form-control" id="inputZip" placeholder="${val.cep}" readonly>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputAddress">Endereço</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="${val.endereco}">
+                <input type="text" class="form-control" id="inputAddress" placeholder="${val.endereco}" readonly>
               </div>
 
               <div class="form-group col-md-6">
                 <label for="inputBairro">Bairro</label>
-                <input type="text" class="form-control" id="inputBairro" placeholder="${val.bairro}">
+                <input type="text" class="form-control" id="inputBairro" placeholder="${val.bairro}" readonly>
               </div>
             </div>
 

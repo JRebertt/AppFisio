@@ -4,5 +4,13 @@
  * because it will make it harder for you to update.
  * 
  */
+.profile-widget-items {
+  padding: 1rem;
+  text-align: center;
+}
+ .info-user{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ }
 
 /*# sourceMappingURL=custom.css.map */
