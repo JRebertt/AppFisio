@@ -35,7 +35,7 @@
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
       <div class="navbar-bg"></div>
-      
+
       <!--Navbar Start-->
       <nav class="navbar navbar-expand-lg main-navbar">
         <form class="form-inline mr-auto">
@@ -50,7 +50,7 @@
               <div class="d-sm-none d-lg-inline-block">Olá, Usuario</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-title">Logado à 5 min atrás</div>
+              <!-- <div class="dropdown-title">Logado à 5 min atrás</div>
               <a href="features-profile.html" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Perfil
               </a>
@@ -59,10 +59,10 @@
               </a>
               <a href="features-settings.html" class="dropdown-item has-icon">
                 <i class="fas fa-cog"></i> Configuração
-              </a>
-              <div class="dropdown-divider"></div>
+              </a> -->
               <a href="index.html" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Sair
+                <i class="fas fa-sign-out-alt"></i>
+                Sair
               </a>
             </div>
           </li>
@@ -94,6 +94,7 @@
                 <li><a class="nav-link " href="pacientes.html">Todos Pacientes</a></li>
                 <li><a class="nav-link" href="avaliar.html">Avaliação</a></li>
                 <li><a class="nav-link" href="evoluir.html">Evolução</a></li>
+                <li><a class="nav-link" href="orientacao.html">Orientações</a></li>
                 <li class=active><a class="nav-link" href="historico.html">Histórico</a></li>
               </ul>
             </li>
@@ -154,16 +155,16 @@
           <div class="contentHistoric">
             <div class="card">
               <div class="card-header">
-                <h4>Show/Hide</h4>
+                <h4>Mais Detalhes</h4>
                 <div class="card-header-action">
                   <a data-collapse="#mycard-collapse" class="btn btn-icon btn-info" href="#"><i
                       class="fas fa-minus"></i></a>
                 </div>
               </div>
               <div class="collapse show" id="mycard-collapse">
-                <div class="card-body">
-                  <h2 class="section-title">September 2018</h2>
-                  <div class="row">
+                <div class="card-body" id="elementHistoric">
+                  <h2>Escolha um paciente...</h2>
+                  <!-- <div class="row">
                     <div class="col-12">
                       <div class="activities">
                         <div class="activity">
@@ -321,8 +322,10 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
+              </div>
+                
                 <div class="card-footer">
                   Card Footer
                 </div>
@@ -356,6 +359,7 @@
   <script src="assets/js/stisla.js"></script>
 
   <!-- JS Libraies -->
+
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>

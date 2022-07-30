@@ -14,9 +14,25 @@ var service = firebase.initializeApp(firebaseConfig);
 
 //URL API axios
 const url = "https://appfisio-api.herokuapp.com/api/pacientes";
+const urlHistoric = "https://appfisio-api.herokuapp.com/api/historico/pacientes/";
+const urlEvolution = "https://appfisio-api.herokuapp.com/api/evolucoes/pacientes/";
 
 // Declarando Variaveis
 const db = firebase.firestore();
 const form = document.getElementById("forms");
 const btnForm = document.getElementById("btn-form");
 const deletar = document.querySelectorAll("btn-del");
+
+const contentPacientes = document.getElementById("contentPacientes");
+
+console.log(contentPacientes)
+
+const histoc = document.getElementById("elementHistoric")
+console.log(histoc)
+
+// const historicBody = document.getElementById("bodyHistoric")
+//         console.log(historicBody)
+
+const gamB = document.getElementById('gambi');
+console.log(gamB);
+

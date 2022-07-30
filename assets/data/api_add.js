@@ -39,9 +39,7 @@ btnForm.addEventListener("click", (e) => {
     bairro: bairro,
     dataNascimento: data,
   })
-
-    .then(() => {
-
+  .then(() => {
       iziToast.success({
         title: 'Sucesso',
         message: 'Paciente Cadastrado com Sucesso',
@@ -54,10 +52,11 @@ btnForm.addEventListener("click", (e) => {
         form.reset();
       }, 1600)
 
-
     })
     .catch((err) => console.log(err));
 });
+
+
 
 function getUser() {
   axios.get(`${url}?tipo=ativos`)
@@ -73,7 +72,6 @@ function getUser() {
         </tr>`;
 
       res.data.map((val) => {
-        // console.log(val)
         let id = val.id;
 
         table.innerHTML += `<tr>        
@@ -90,21 +88,17 @@ function getUser() {
                 class="btn btn-danger btn-del" type="button" onclick=deleteUser("${id}")>
                 <i class="fas fa-trash"></i>
               </button>
-
-            </td>   
-                 
+            </td>         
         </tr>`;
       });
-      // console.log(res.data);
     })
     .catch((err) => console.log(err));
 }
-
 getUser();
+
 
 function deleteUser(id) {
   axios.delete("https://appfisio-api.herokuapp.com/api/pacientes/" + id)
-
     .then((res) => {
       iziToast.error({
         title: 'Deletado',
@@ -135,8 +129,8 @@ function editUser(id) {
 
       modal.innerHTML = '';
 
-      modal.innerHTML += 
-      `
+      modal.innerHTML +=
+        `
       <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Paciente ${val.nome}</h5>
@@ -301,27 +295,27 @@ function editUser(id) {
           </div>
       `
 
-      
+
 
       console.log(res);
 
       //mask form
-    $(document).ready(function () {
-      //CPF 000.000.000-00
-      $('#inputCPF').mask("000.000.000-00");
+      $(document).ready(function () {
+        //CPF 000.000.000-00
+        $('#inputCPF').mask("000.000.000-00");
 
-      //Data
-      $('#inputData').mask("00/00/0000");
+        //Data
+        $('#inputData').mask("00/00/0000");
 
-      //Idade
-      $('#inputIdade').mask("00");
+        //Idade
+        $('#inputIdade').mask("00");
 
-      //celular
-      $('#inputCel').mask("(00) 90000 - 0000");
+        //celular
+        $('#inputCel').mask("(00) 90000 - 0000");
 
-      //cep
-      $('#inputZip').mask("00000 - 000");
-    });
+        //cep
+        $('#inputZip').mask("00000 - 000");
+      });
     })
 
     .catch(err => console.log(err))

@@ -174,47 +174,47 @@
 //   }
 // });
 
-var statistics_chart = document.getElementById("myChart").getContext('2d');
-console.log(statistics_chart);
-var myChart = new Chart(statistics_chart, {
-  type: 'line',
-  data: {
-    labels: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
-    datasets: [{
-      label: 'Statistics',
-      data: [640, 387, 530, 302, 430, 270, 488],
-      borderWidth: 5,
-      borderColor: '#6777ef',
-      backgroundColor: 'transparent',
-      pointBackgroundColor: '#fff',
-      pointBorderColor: '#6777ef',
-      pointRadius: 4
-    }]
-  },
+// var statistics_chart = document.getElementById("myChart").getContext('2d');
+// console.log(statistics_chart);
+// var myChart = new Chart(statistics_chart, {
+//   type: 'line',
+//   data: {
+//     labels: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
+//     datasets: [{
+//       label: 'Statistics',
+//       data: [0, 50, 80, 160, 200, 250, 300],
+//       borderWidth: 5,
+//       borderColor: '#6777ef',
+//       backgroundColor: 'transparent',
+//       pointBackgroundColor: '#fff',
+//       pointBorderColor: '#6777ef',
+//       pointRadius: 4
+//     }]
+//   },
   
-  options: {
-    legend: {
-      display: false
-    },
-    scales: {
-      yAxes: [{
-        gridLines: {
-          display: false,
-          drawBorder: false,
-        },
-        ticks: {
-          stepSize: 150
-        }
-      }],
-      xAxes: [{
-        gridLines: {
-          color: '#fbfbfb',
-          lineWidth: 2
-        }
-      }]
-    },
-  }
-});
+//   options: {
+//     legend: {
+//       display: false
+//     },
+//     scales: {
+//       yAxes: [{
+//         gridLines: {
+//           display: false,
+//           drawBorder: false,
+//         },
+//         ticks: {
+//           stepSize: 150
+//         }
+//       }],
+//       xAxes: [{
+//         gridLines: {
+//           color: '#fbfbfb',
+//           lineWidth: 2
+//         }
+//       }]
+//     },
+//   }
+// });
 
 
 

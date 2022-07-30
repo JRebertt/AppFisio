@@ -8,6 +8,10 @@
   <!-- General CSS Files -->
   <link rel="stylesheet" href="../modules/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../modules/fontawesome/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
+
 
   <!-- CSS Libraries -->
 
@@ -400,8 +404,13 @@
             <h1>Blank Page</h1>
           </div>
 
-          <div class="section-body">
-            <label>Peso <input id="peso"/> kg</label><br/>
+          <select class="js-example-basic-single" name="state">
+            <option value="AL">Alabama</option>
+              ...
+            <option value="WY">Wyoming</option>
+          </select>
+
+            <!-- <label>Peso <input id="peso"/> kg</label><br/>
             <label>Altura <input id="altura"/> m</label><br/>
             <button id="botao">Calcular IMC</button>
             <div id="resultado">
@@ -418,7 +427,7 @@
                 divResultado.appendChild(hr);
                 divResultado.appendChild(spanIMC);
               });
-            </script>
+            </script> -->
           </div>
         </section>
       </div>
@@ -443,6 +452,10 @@
   <script src="assets/js/stisla.js"></script>
   
   <!-- JS Libraies -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+
 
   <!-- Page Specific JS File -->
   
